@@ -10,6 +10,10 @@ app.get('/',(req, res) => {
     res.render('test',{});
 });
 
+app.get('/surInfo',(req, res) => {
+    res.render('surInfo',{})
+});
+
 app.listen(port, ()=>{
     console.log("server open: ", port);
 });
