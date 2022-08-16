@@ -9,7 +9,7 @@ const port = 8000;
 app.get('/',(req, res) => {
     res.render('test',{});
 });
-app.get('/',(req, res) => {
+app.get('/Home',(req, res) => {
     res.render('Home',{});
 });
 app.listen(port, ()=>{
