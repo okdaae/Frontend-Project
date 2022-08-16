@@ -14,6 +14,10 @@ app.get('/surInfo',(req, res) => {
     res.render('surInfo',{})
 });
 
+app.get('/Home',(req, res) => {
+    res.render('Home',{});
+});
+
 app.listen(port, ()=>{
     console.log("server open: ", port);
 });
