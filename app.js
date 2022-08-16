@@ -10,8 +10,8 @@ app.get('/',(req, res) => {
     res.render('test',{});
 });
 
-app.get('/surInfo',(req, res) => {
-    res.render('surInfo',{})
+app.get('/tools',(req, res) => {
+    res.render('tools',{})
 });
 
 app.get('/Home',(req, res) => {
