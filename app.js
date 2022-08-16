@@ -17,6 +17,9 @@ app.get('/surInfo',(req, res) => {
 app.get('/Home',(req, res) => {
     res.render('Home',{});
 });
+app.get('/Information',(req, res) => {
+    res.render('Information',{});
+});
 
 app.listen(port, ()=>{
     console.log("server open: ", port);
