@@ -16,6 +16,10 @@ app.get('/tools',(req, res) => {
     res.render('tools',{})
 });
 
+app.get('/navbar',(req, res) => {
+  res.render('navbar',{})
+});
+
 app.get('/Home',(req, res) => {
     res.render('Home',{});
 });

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-color: floralwhite;
+            --background-color: lightsteelblue;
+            --accent-color: #E5874A;
+        }
+        body{
+            margin: 0;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        a{
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:var(--background-color);
+            padding: 8px 12px;
+        }
+
+        .navbar_logo{
+            font-size: 24px;
+            color: var(--text-color);
+        }
+
+        .navbar_logo i{
+            color:var(--accent-color);
+        }
+
+        .navbar_menu{
+            display:flex;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .navbar_menu li{
+            padding: 8px 12px;
+        }
+
+        .navbar_menu li:hover{
+            background-color: var(--accent-color);
+            border-radius: 4px;
+        }
+
+        .navbar_icons{
+            list-style: none;
+            color: var(--text-color);
+            display: flex;
+            padding-left:0;
+        }
+
+        .navbar_icons li{
+            padding: 8px 12px;
+        }
+
+        .navbar_toggleBtn{
+            display: none;
+            position: absolute;
+            right: 32px;
+            font-size: 24px;
+            color:var(--accent-color);
+        }
+
+        @media screen and (max-width: 768px){
+            .navbar{
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 8px 24px;
+            }
+
+            .navbar_menu{
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%
+            } 
+
+            .navbar_menu li{
+                width: 100%;
+                text-align: center;
+            }
+
+            .navbar_icons {
+                display: none;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .navbar_toggleBtn{
+                display: block;
+            }
+
+            .navbar_menu.active,
+            .navbar_icons.active{
+                display: flex;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/acfe1c41fb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <i class="fa-solid fa-tents"></i>
+            <a href="">CAPMINGTITLE</a>
+        </div>
+
+        <ul class="navbar_menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Information</a></li>
+            <li><a href="/tools">Tools</a></li>
+            <li><a href="">Foods</a></li>
+            <li><a href="">Map</a></li>
+        </ul>
+ 
+        <ul class="navbar_icons">
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-facebook-f"></i></li>
+        </ul>
+
+        <a href="#" class="navbar_toggleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+
+    <script>
+        const toggleBtn = document.querySelector('.navbar_toggleBtn');
+        console.log(toggleBtn);
+        const menu = document.querySelector('.navbar_menu');
+        const icons = document.querySelector('.navbar_icons');
+
+        toggleBtn.addEventListener('click', function(){
+            menu.classList.toggle('active');
+            icons.classList.toggle('active');
+        });
+
+    </script>
+</body>
+</html>
