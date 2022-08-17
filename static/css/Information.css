@@ -25,44 +25,37 @@ p {
     padding: 15px;
 
 }
+
+/* 텐트 이용 */
+
 .tent{
   width: 100%;
-  height: 300px;
- 
+  height: 500px;
   text-align: center;
   display: flex;
+  vertical-align: middle;
 }
 .tent-img{
-    width: 30%;
+    width: 40%;
     height: inherit;
+    margin-left: 100px;
 }
-.tent-using{
-    width: 60%;
-    height: inherit;
+.tents-img{
+    max-width: 100%;
+    min-width: 50%;
+    width: auto;
+    height: 350px;
+    padding-right: 10px;
+}
+.table-first{
+    width: 40%;
+    height: 350px;
+    background-color: aqua;
     text-align: center;
-    padding: 35px;
-   
+    margin-right: 150px;
 }
-.tent-table{
-    text-align: center;
-    margin: auto;
-}
-table{
-   text-align: center;
-   width: 100%;
-   border-spacing: 3px;
-   padding-left: 50px;
-   
-}
-th{
-padding: 10px;
-background-color: #eeee;
-font-weight: 600;
-letter-spacing: 2px;
-}
-td{
-    padding-top: 10px;
-}
+
+/* 이용안내 css */
 .Using-Guide{
     display: flex;
     width: 100%;
@@ -92,10 +85,16 @@ ul, li {
     height: auto;
     padding-left: 50px;
 }
-.tents-img{
-    max-width: 100%;
-    width: auto;
-    height: auto;
-    padding-left: 50px;
-}
 
+.refund{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    align-items: center;
+}
+.refund-img{
+    max-width: 100%;
+    width: 30%;
+    padding-left: 50px;
+    
+}
