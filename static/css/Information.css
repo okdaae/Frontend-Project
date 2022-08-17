@@ -17,7 +17,7 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     text-align: center;
-    font-size: 5px;
+    font-size: 10px;
 }
 .sub_title{
     text-align: center;
@@ -33,7 +33,7 @@ p {
   display: flex;
 }
 .tent-img{
-    width: 40%;
+    width: 30%;
     height: inherit;
 }
 .tent-using{
@@ -62,3 +62,27 @@ letter-spacing: 2px;
 td{
     padding-top: 10px;
 }
+.Using-Guide{
+    display: flex;
+    width: 100%;
+    height: 1300px;
+    text-align: center;
+    position: relative;
+}
+.Guide-img{
+    width: 30%;
+    height: 300px;
+}
+.Guide-text{
+    width: 70%;
+    height: inherit;
+    text-align: center;
+    
+}
+ul, li {
+    list-style: none;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+
