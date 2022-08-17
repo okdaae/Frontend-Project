@@ -36,9 +36,9 @@ p {
   vertical-align: middle;
 }
 .tent-img{
-    width: 40%;
+    width: 35%;
     height: inherit;
-    margin-left: 100px;
+    margin-left: 150px;
 }
 .tents-img{
     max-width: 100%;
@@ -50,9 +50,21 @@ p {
 .table-first{
     width: 40%;
     height: 350px;
-    background-color: aqua;
     text-align: center;
     margin-right: 150px;
+}
+.tent-table{
+    width: 100%;
+    text-align: center;
+    height: auto;
+}
+table td{
+    font-size: 14px;
+    padding: 10px;
+}
+table th{
+    background-color: #eeee;
+    
 }
 
 /* 이용안내 css */
