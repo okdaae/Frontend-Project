@@ -45,9 +45,19 @@ p {
 .tent-table{
     text-align: center;
     margin: auto;
-    border-spacing: 2px;
 }
 table{
    text-align: center;
    width: 100%;
+   border-spacing: 3px;
+   
+}
+th{
+padding: 10px;
+background-color: #eeee;
+font-weight: 600;
+letter-spacing: 2px;
+}
+td{
+    padding-top: 10px;
 }
