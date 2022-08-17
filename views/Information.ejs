@@ -4,6 +4,11 @@
     <link rel="stylesheet" href="/static/css/Information.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
+    <script src="resource/js/jquery-1.11.0.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     <title>Inforamtion</title>
 
    
@@ -16,41 +21,48 @@
                 <a class="navbar-brand" href="#">
                 <img src="/static/img/premium-icon-camping-2664660.png"  width="30" height="24" class="d-inline-block align-text-top">
                 <span class="navbar-brand mb-0 h2">Inforamtion</span>
-                <button class="navbar-toggler-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></button>menu
+                <button class="navbar-toggler-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></button>상세안내
                 </a>  
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                
             </div>
          </nav>
        </div> 
         <!-- detail-->
-
-
+       <div class="reserCon01"></div>
+       <!-- p -->
+       <div class="sub_title">
+          <h3>Using Guide</h3>
+          <p>이용 가이드</p>
+          <span>캠핑장 이용 안내 입니다. </span>
+          <hr>
+       </div>
+       <div class="tent">
+          <div class="tent-img">
+            <img src="/static/img/tent01.jpg" width="300px" height="inherit">
+          </div>
+          <div class="tent-using">
+            <strong>텐트 대여 및 구매</strong>
+            
+          </div>
+       </div>
 
 
 
        
         <!-- offcanvas -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-              <h5 id="offcanvasRightLabel">Menu</h5>
-              <hr>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Home</li>
-                    <ul class="dropdown-toggle">Information
-                        <li class="dropdown-item">asdasd</li>
-                        <li>asdasdqweasd</li>
-                    </ul>
-                    <li class="list-group-item">Tools</li>
-                    <li class="list-group-item">Foods</li>
-                    <li class="list-group-item">Map</li>
-                  </ul>
-            </div>
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">상세안내</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
+          <div class="offcanvas-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><a>텐트 대여료,구매 가이드</a></li>
+              <li class="list-group-item"><a>캠핑장 이용 가이드</a></li>
+              <li class="list-group-item"><a>환불 정책</a></li>
+            </ul>
+          </div>
+        </div>
         <script>
 
         </script>
