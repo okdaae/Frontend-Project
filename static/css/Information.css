@@ -17,6 +17,7 @@ p {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     text-align: center;
+    font-size: 5px;
 }
 .sub_title{
     text-align: center;
@@ -27,17 +28,37 @@ p {
 .tent{
   width: 100%;
   height: 300px;
-  background-color: antiquewhite;
+ 
   text-align: center;
   display: flex;
 }
 .tent-img{
-    width: 20%;
+    width: 40%;
     height: inherit;
-    
 }
 .tent-using{
-    width: 80%;
+    width: 60%;
     height: inherit;
     text-align: center;
+    padding: 35px;
+   
+}
+.tent-table{
+    text-align: center;
+    margin: auto;
+}
+table{
+   text-align: center;
+   width: 100%;
+   border-spacing: 3px;
+   
+}
+th{
+padding: 10px;
+background-color: #eeee;
+font-weight: 600;
+letter-spacing: 2px;
+}
+td{
+    padding-top: 10px;
 }
