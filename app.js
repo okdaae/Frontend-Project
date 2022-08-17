@@ -23,6 +23,10 @@ app.get('/Information',(req, res) => {
     res.render('Information',{});
 });
 
+app.get('/mdaae',(req, res) => {
+    res.render('mdaae',{});
+});
+
 app.listen(port, ()=>{
     console.log("server open: ", port);
 });
