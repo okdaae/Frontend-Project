@@ -51,6 +51,7 @@ table{
    text-align: center;
    width: 100%;
    border-spacing: 3px;
+   padding-left: 50px;
    
 }
 th{
@@ -84,5 +85,17 @@ ul, li {
 }
 .mb20 {
     margin-bottom: 20px;
+}
+.using-img{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    padding-left: 50px;
+}
+.tents-img{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    padding-left: 50px;
 }
 
