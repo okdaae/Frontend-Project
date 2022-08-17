@@ -12,6 +12,9 @@ a{
     text-decoration: none;
     color: var(--text-color);
 }
+a:hover{
+    color: var(--text-color);
+}
 
 .navbar{
     display: flex;
@@ -22,7 +25,7 @@ a{
 }
 
 .navbar_logo{
-    font-size: 24px;
+    font-size: 20px;
     color: var(--text-color);
 }
 
@@ -45,6 +48,7 @@ a{
 .navbar_menu li:hover{
     background-color: var(--accent-color);
     border-radius: 4px;
+    color: var(--text-color);
 }
 
 .navbar_icons{
@@ -62,8 +66,11 @@ a{
 .navbar_toggleBtn{
     display: none;
     position: absolute;
+    top: 13.5px;
     right: 32px;
     font-size: 24px;
+}
+.navbar_toggleBtn:hover{
     color:var(--accent-color);
 }
 
@@ -78,7 +85,8 @@ a{
         display: none;
         flex-direction: column;
         align-items: center;
-        width: 100%
+        width: 100%;
+        margin: 10px 0px;
     } 
 
     .navbar_menu li{
@@ -88,8 +96,13 @@ a{
 
     .navbar_icons {
         display: none;
-        justify-content: center;
+        justify-content: space-between;
         width: 100%;
+        margin: 10px 0px;
+    }
+    .fa-facebook-f{
+        position: relative;
+        left: 9px;
     }
 
     .navbar_toggleBtn{
