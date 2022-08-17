@@ -18,6 +18,10 @@ app.get('/Home',(req, res) => {
     res.render('Home',{});
 });
 
+app.get('/mdaae',(req, res) => {
+    res.render('mdaae',{});
+});
+
 app.listen(port, ()=>{
     console.log("server open: ", port);
 });
