@@ -1,0 +1,117 @@
+    /* reset css */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        font-family: 'Noto Sans KR', sans-serif; 
+      }
+      #main{
+        background-color: #fff;
+      }
+      .section{
+        width: 1200px;
+        margin: auto;
+      }
+      .title{
+      position: relative;
+      font-size: 20px;
+      padding: 20px 0 ;
+      color: #e5874a;
+      font-weight: 400;
+      letter-spacing: -.8px;
+      }
+      .title-group{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+      }
+      .button-group{
+        position: absolute;
+        right: 20px;
+        top: 0;
+        right: -217px;
+      }
+      .adress-title{
+        font-size: 26px;
+        line-height: 38px;
+        color: #e5874a;
+      }
+      a{
+        text-decoration: none;
+        display: block;
+        color: #fff;
+        padding: 10px;
+      }
+      .left-button{
+        padding: 0 20px;
+        border-color: transparent;
+        background-color: #e5874a;
+      }
+      .right-button{
+        padding: 0 20px;
+        border-color: transparent;
+        background-color: #e5874a;
+      }
+  /* .title-bullet{
+    position: absolute;
+      left: 0;
+      bottom: -10px;
+      width: 30px;
+      height: 1px;
+      z-index: 1;
+      background-color: #e5874a
+  } */
+  .title-bullet::after{
+  
+      position: absolute;
+      top: 55px;
+      left: 0;
+      right: 0;
+      bottom: -10px;
+      content: '';
+      width: 1200px;
+      height: 1px;
+      background-color: #d1d1d1;
+  }
+  .title-aria{
+    
+    padding: 0 265px 0 20px;
+      margin: 40px 0;
+      height: auto;
+      max-height: 140px;
+  }
+  .list-info{
+    padding: 30px 0;
+      letter-spacing: -1px;
+      font-size: 15px;
+      line-height: 22px;
+      border-top: 1px solid #d1d1d1;
+  }
+  .item-title{
+    float: left;
+      width: 168px;
+      padding-left: 10px;
+      font-size: 15px;
+      color: #111;
+  }
+  ul li{
+    list-style: none;
+  }
+  li{
+    float: left;
+    margin-right: 9px;
+  }
+  .icon{
+    margin-right: 10px;
+  }
+  .images img{
+    width: 300px;
+    height: 300px;
+  }
+  .img-group{
+    display: flex;
+    padding-bottom: 40px;
+  }
