@@ -27,18 +27,27 @@ p {
 .tent{
   width: 100%;
   height: 300px;
-  background-color: antiquewhite;
+ 
   text-align: center;
   display: flex;
 }
 .tent-img{
     width: 40%;
     height: inherit;
-    
 }
 .tent-using{
     width: 60%;
     height: inherit;
     text-align: center;
     padding: 35px;
+   
+}
+.tent-table{
+    text-align: center;
+    margin: auto;
+    border-spacing: 2px;
+}
+table{
+   text-align: center;
+   width: 100%;
 }
