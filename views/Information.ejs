@@ -15,10 +15,12 @@
     </head>
     <body>
         <!-- nav-bar -->
-       
+     <div id="wrap">  
         <!-- detail-->
        <div class="reserCon01"></div>
        <!-- p -->
+      
+
        <div class="sub_title">
           <h3>Rental Tent</h3>
           <span>캠핑장 텐트 이용 안내 입니다. </span>
@@ -233,7 +235,9 @@
       <div class="refund-table">
           <table class="policy-table">
               <thead>
-                <strong style="font-size: 50px;">
+                <strong style="font-size: 50px;  overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;">
                 Refund 
                 </strong>
               </thead>
@@ -289,8 +293,26 @@
       </div>
 <!-- 환불 테이블 끝남 -->
       <div>
-        <footer>
-          asd
+        <footer class="footer-container">
+          <h6>Tel)
+            <br>
+            010-9402-3853
+            <br>
+            Bank Account)
+            <br>
+            478101-04-441526(국민)
+            <br>
+            e-mail)
+            <br>
+            mbh219@naver.com
+          </h6>
+      
+          <p>주소:강원도 원주시 판부면 백운산길 67-105
+            <br>
+            업체명: 캠팡 || 대표자: 5조
+          </p>
+
+          <a href="#" class="scrollTop" style="font-size: 50px;">▲</a>
         </footer>
       </div>
         <!-- offcanvas -->
@@ -307,8 +329,24 @@
             </ul>
           </div>
         </div>
-        <script>
+    </div>    
 
+
+        <script>
+          $(document).ready(function(){
+            $(window).scroll(function(){
+              if($(this).scrollTop()>100){
+                $('.scrollTop').fadeIn();
+              }else{
+                $('scrollTop').fadeOut();
+              }
+            });
+            $('scorllTop').click(function(){
+              $('html, body').animate({scrollTop : 0},800);
+              return false;
+            });
+          });
+        
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
