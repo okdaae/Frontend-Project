@@ -8,17 +8,33 @@ const port = 8000;
 app.get("/", (req, res) => {
   res.render("test", {});
 });
-app.get("/", (req, res) => {
-  res.render("Home", {});
-});
 app.get("/one", (req, res) => {
   res.render("one", {});
 });
 
-app.get("/food", (req, res) => {
-  res.render("food", {});
+app.get('/tools',(req, res) => {
+    res.render('tools',{})
 });
 
-app.listen(port, () => {
-  console.log("server open: ", port);
+app.get('/navbar',(req, res) => {
+  res.render('navbar',{})
+});
+
+app.get('/Home',(req, res) => {
+    res.render('Home',{});
+});
+app.get('/Information',(req, res) => {
+    res.render('Information',{});
+});
+
+app.get('/mdaae',(req, res) => {
+    res.render('mdaae',{});
+});
+
+app.get("/food", (req, res) => {
+    res.render("food", {});
+});
+
+app.listen(port, ()=>{
+    console.log("server open: ", port);
 });
