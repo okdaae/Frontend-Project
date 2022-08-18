@@ -2,65 +2,141 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-</head>
-<style>
-.titles{
-  padding: 40px 40px 0 40px;
-}  
-.kit{
-  width: 300px;
-  height: 300px;
-}
-.line{
-  border-style:solid;
-  border-width: 1px;
-  border-left-width: 0;
-  border-right-width: 0;
-  border-bottom-width: 0;
-  margin: 0 auto 28px ;
-}
-.kit{
-  margin: 7px;
-}
-.kit:hover{
-  transform: translateY(30px);
-  /* transform: scale(1.3); */
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-.food_container h3{
-  text-align: center;
-  padding: 23px;
-}
-.snack{
-text-align: center;
-}
-.snack_menu{
-  display: inline-block;
-  text-align: center;
-}
-.snack_menu li{
-  list-style: none;
-  font-size: 24px;
-}
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    .titles{
+      padding: 40px 40px 0 40px;
+      color: #E5874A;
+      font-size: 30px;
+      margin-bottom: 30px;
+    }  
+    .easy_food{
+      margin:20px;
+    }
+    .kit{
+      width: 300px;
+      height: 300px;
+    }
+    .line{
+      border-style:solid;
+      border-width: 1px;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-bottom-width: 0;
+      margin: 0 auto 28px ;
+    }
+    .kit{
+      margin: 7px;
+    }
+    .kit:hover{
+      transform: translateY(30px);
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .food_container h3{
+      text-align: center;
+      padding: 23px;
+    }
+    .snack{
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .snack_menu{
+      text-align: center;
+      padding-left: 50px;
+    }
+    .snack_menu li{
+      list-style: none;
+      
+    }
+    
+    .containerbox {
+      display: flex;
+      position: relative;
+      /* width: 100%; */
+    /* margin: 40px; */
+    }
+    .image {
+      display: inline-block;
+      width: 300px;
+      height: 300px;
+    }
+    
+    .overlay {
+      /* display: inline-block; */
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      right: 0;
+      background-color:#E5874A;
+      overflow: hidden;
+      width: 300px;
+      height:0;
+      transition: .5s ease;
+    
+    }
+    
+    .containerbox:hover .overlay {
+      bottom: 0;
+      height: 100%;
+    }
+    .text {
+      color: white;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    .bbq_user{
+      text-align: center;
+      /* align-items: center; */
+      vertical-align: middle;
+    }
+    .bbqbox{
+      /* display: flex; */
+      justify-content:center; 
+      align-items:center;
+    }
+    
 
-</style>
+    /* @media screen and (max-width:1000px){
+      .bbqbox{
+        display: block;
+      }
+    }
+    @media screen and (max-width:768px){
+      .bbqbox{
+        display: block;
+      }
+
+    } */
+    
+  
+    
+  </style>
+</head>
 
 <body>
   <div class="food_container">
-    <h1 class="titles">간편요리</h1>
+    <div class="titles">간편요리</div>
     <div class="line"></div>
     <div class="easy_food">
-      <img class="kit" src="/static/img/hot.png" alt="">
-      <img class="kit"src="/static/img/대구.png" alt="">
-      <img class="kit"src="/static/img/떡.png" alt="">
-      <img class="kit"src="/static/img/크림.png" alt="">
+      <img class="kit" src="/static/img/food/hot.png" alt="">
+      <img class="kit"src="/static/img/food/대구.png" alt="">
+      <img class="kit"src="/static/img/food/떡.png" alt="">
+      <img class="kit"src="/static/img/food/크림.png" alt="">
     </div>
-    <h3> 캠핑은 언제나 배고프다!</h3>
   </div>
-  
+
+  <div class="titles">매점</div>
+  <div class="line"></div>
   <div class="snack">
-    <h1 class="titles">매점</h1>
-    <div class="line"></div>
     <ul class="snack_menu">
       <li>숟가락</li>
       <li>젓가락</li>
@@ -89,6 +165,42 @@ text-align: center;
   </div>
 
 
+
+  <div class="titles">바베큐</div>
+  <div class="line"></div>
+
+  <div class="bbqbox row">
+    <div class="containerbox col-12 col-sm-6 col-md-4">
+      <img src="/static/img/food/bbq.jpg" class="image">
+      <div class="overlay">
+        <div class="text">BBQ SET
+          <br><br>삼겹살 500g
+          <br>목살 500g
+          <br>소시지
+          <br>쌈set 
+          <br>쌈장 
+          <br>새송이버섯
+        </div>
+      </div>
+    </div>   
+    <div class="containerbox col-12 col-sm-6 col-md-4">
+      <img src="/static/img/food/fire.jpg" class="image">
+        <div class="overlay">
+          <div class="text">FIRE SET
+            <br><br>화롯대숯
+            <br>or 
+            <br>장작(1회)
+          </div>
+        </div>
+    </div>
+    <div class="bbq_user col-12 col-md-4">
+      <div>바베큐set 미리 예약해주셔야 사용 가능합니다.</div>
+      <div>주, 야간 자연의 경치를 바라보며 좋은 시간 보내시길 바랍니다.</div>
+      <div>바베큐 set : 50,000원 (인원수상관없이) / 현장결제</div>
+      <div>파이어 set : 20,000원 (인원수상관없이) / 현장결제</div>
+      <div> 매너시간 : 23:00시 까지 </div>
+    </div>
+  </div>
 
 
 </body>
