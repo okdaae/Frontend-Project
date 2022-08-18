@@ -7,10 +7,10 @@
 
         <ul class="navbar_menu">
             <li><a href="">Home</a></li>
-            <li><a href="">Information</a></li>
+            <li><a href="/Information">Information</a></li>
             <li><a href="/tools">Tools</a></li>
-            <li><a href="">Foods</a></li>
-            <li><a href="">Map</a></li>
+            <li><a href="/food">Foods</a></li>
+            <li><a href="/mdaae">Map</a></li>
         </ul>
  
         <ul class="navbar_icons">
@@ -34,5 +34,13 @@
             menu.classList.toggle('active');
             icons.classList.toggle('active');
         });
+        
 
+        window.addEventListener('scroll',function(){
+            if(scrollY > 350){
+                console.log(scrollY);
+            }
+          })
     </script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
