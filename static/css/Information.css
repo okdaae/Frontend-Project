@@ -1,3 +1,9 @@
+#wrap{
+    position: relative;
+    overflow: hidden;
+}
+
+
 .reserCon01{
     width: 100%;
     background: url(/static/img/information/01_01.jpg) no-repeat center center;
@@ -42,14 +48,13 @@ p {
 }
 .tent-img{
     width: 35%;
-    height: inherit;
+    height: 500px;
     margin-left: 150px;
 }
 .tents-img{
     max-width: 100%;
     min-width: 50%;
-    width: auto;
-    height: 350px;
+    object-fit: fill;
     padding-right: 10px;
 }
 .table-first{
@@ -158,6 +163,9 @@ ul, li {
     border: 1px solid #eeee;
     width: 100%;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .policy-table thead{
     font-size: 150px;
@@ -178,5 +186,12 @@ ul, li {
     font-weight: 600;
     text-align: center;
     padding-top: 10px;
-
+}
+.scrollTop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: block;
 }
