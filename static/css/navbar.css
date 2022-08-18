@@ -18,10 +18,11 @@ a:hover{
 
 .navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    background-color:var(--background-color);
+    /* background-color:var(--background-color); */
     padding: 15px 12px;
+    background:  transparent;
 }
 
 .navbar_logo{
@@ -35,7 +36,7 @@ a:hover{
 
 .navbar_menu{
     display:flex;
-    align-items: center;
+    align-items: flex-end;
     list-style: none;
     padding-left: 0;
     margin: auto 0;
