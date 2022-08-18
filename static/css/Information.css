@@ -169,3 +169,14 @@ ul, li {
     border: 1px solid #eeee;
     padding: 20px;
 }
+.footer-container{
+    width: 100%;
+    height: auto;
+    background-color: #E5874A;
+    color: azure;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 10px;
+
+}
