@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>오시는길</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/adress.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
@@ -20,7 +20,7 @@
     <!-- progress-bar -->
 
     <div class="map" id="inf">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12699.72370927841!2d127.9497716!3d37.273065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf6cd1741ac3210b8!2z7LqE7YyM7Iqs66Gc7Jqw!5e0!3m2!1sko!2skr!4v1660714224155!5m2!1sko!2skr" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12699.72370927841!2d127.9497716!3d37.273065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf6cd1741ac3210b8!2z7LqE7YyM7Iqs66Gc7Jqw!5e0!3m2!1sko!2skr!4v1660714224155!5m2!1sko!2skr" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="iframe-img"></iframe>
     </div>
 <div class="title-aria">
   <h3>캠팡</h3>
@@ -49,14 +49,34 @@
           이용안내</dt>
         <dd class="item-description">
           <ul class="list-guide">
-            <li class="item-guide"><span class="sub-text">예약</span></li>
-            <li class="item-guide"><span class="sub-text">주차</span></li>
-            <li class="item-guide"><span class="sub-text">애완동물 동반</span></li>
-            <li class="item-guide"><span class="sub-text">남/녀 화장실 구분</span></li>
+            <li class="item-guide">
+            <div class="item-guide-group">
+              <span><i class="fa-solid fa-calendar-check"></i></span>
+              <span class="sub-text">예약</span>
+            </div>
+            </li>
+            <li class="item-guide">
+              <div class="item-guide-group">
+                <span><i class="fa-solid fa-car"></i></span>
+              <span class="sub-text">주차</span>
+              </div>
+            </li>
+            <li class="item-guide">
+              <div class="item-guide-group">
+                <span><i class="fa-solid fa-dog"></i></span>
+              <span class="sub-text">애완동물 동반</span>
+              </div>
+            </li>
+            <li class="item-guide">
+            <div class="item-guide-group">
+              <span><i class="fa-solid fa-restroom"></i></span>
+              <span class="sub-text">남/녀 화장실 구분</span>
+            </div>
+            </li>
           </ul>
     </dl>
     <!--근처에 놀거리-->
-    <h1 class="title">근처에 놀거리</h1>
+    <h3 class="title play">근처에 놀거리</h3>
 <div class="img-group">
   <div class="images">
   <a href="#" class="banner-img"><img src="/static/img/water.jpg" alt="water">
@@ -71,8 +91,8 @@
     <p class="hover-text">캠팡의 명소! 돌탑쌓기</p></a>
   </div>
   <div class="images">
-    <a href="#" class="banner-img"><img src="/static/img/camping-car.jpg" alt="high">
-    <p class="hover-text">함께해서 더 즐거운 차박여행</p></a>
+    <a href="#" class="banner-img"><img src="/static/img/information/camping-car.jpg" alt="high">
+    <p class="hover-text">함께해서 더 즐거운<br>차박여행</p></a>
   </div>
 </div>
   </div>
