@@ -1,10 +1,16 @@
+#wrap{
+    position: relative;
+    overflow: hidden;
+}
+
+
 .reserCon01{
     width: 100%;
     background: url(/static/img/information/01_01.jpg) no-repeat center center;
     background-size: cover;
     padding-bottom: 35%;
 }
-.sub_title p, h3{
+.sub_title p{
     color: #797878;
     font-weight: 600;
     margin-bottom: 0.5%;
@@ -23,7 +29,12 @@ p {
     text-align: center;
     width: 100%;
     padding: 15px;
-
+}
+.sub_title h3{
+    color: #E5874A;
+    font-weight: 600;
+    margin-bottom: 0.5%;
+    letter-spacing: 4px;
 }
 
 /* 텐트 이용 */
@@ -37,14 +48,13 @@ p {
 }
 .tent-img{
     width: 35%;
-    height: inherit;
+    height: 500px;
     margin-left: 150px;
 }
 .tents-img{
     max-width: 100%;
     min-width: 50%;
-    width: auto;
-    height: 350px;
+    object-fit: fill;
     padding-right: 10px;
 }
 .table-first{
@@ -63,7 +73,8 @@ table td{
     padding: 10px;
 }
 table th{
-    background-color: #eeee;
+    background-color:  #E5874A;
+    color: aliceblue;
     
 }
 /* tent css 끝 */
@@ -86,10 +97,12 @@ table th{
 }
 .Guide-text{
     width: 70%;
-    height: 200px;
+    height: 1100px;
     text-align: left;
     font-size: 14px;
-    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .guide-text1{
     display: flex;
@@ -112,7 +125,7 @@ ul, li {
 .refund{
     display: flex;
     width: 100%;
-    height: 1100px;
+    height: 500px;
     text-align: center;
     vertical-align: middle;
    
@@ -133,5 +146,53 @@ ul, li {
     height: 500px;
     margin-right: 30px;
     text-align: left;
-
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.refund-table{
+    text-align: center;
+    width: 40%;
+    height: 700px;
+    margin: auto;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.policy-table{
+    border: 1px solid #eeee;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.policy-table thead{
+    font-size: 150px;
+    border: 1px solid #eeee;
+}
+.policy-table td,th{
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #eeee;
+    padding: 20px;
+}
+.footer-container{
+    width: 100%;
+    height: auto;
+    background-color: #E5874A;
+    color: azure;
+    font-size: 10px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 10px;
+}
+.scrollTop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: block;
+    color: yellowgreen;
 }
