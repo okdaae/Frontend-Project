@@ -44,6 +44,9 @@ a:hover{
 .navbar_menu li{
     padding: 8px 12px;
 }
+/* .login{
+    padding: 8px 12px;
+} */
 
 .navbar_menu li:hover{
     background-color: var(--accent-color);
@@ -61,6 +64,10 @@ a:hover{
 
 .navbar_icons li{
     padding: 8px 12px;
+}
+.navbar_icons li:hover,
+.navbar_icons a:hover{
+    color:var(--accent-color);
 }
 
 .navbar_toggleBtn{
@@ -107,6 +114,7 @@ a:hover{
 
     .navbar_toggleBtn{
         display: block;
+        top: 11px;
     }
 
     .navbar_menu.active,
