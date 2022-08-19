@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>navbar_test</title>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/acfe1c41fb.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/static/css/navbar_test.css">
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar_logo">
+                <i class="fa-solid fa-tents"></i>
+                <a href="">CAMPPANG</a>
+            </div>
+
+            <ul class="navbar_menu">
+                <li><a href="">Home</a></li>
+                <li><a href="/Information">Information</a></li>
+                <li><a href="/tools">Tools</a></li>
+                <li><a href="/food">Foods</a></li>
+                <li><a href="/mdaae">Map</a></li>
+            </ul>
+
+            <ul class="navbar_icons">
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></a></i></li>
+                <li><a href="https://ko-kr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#">login</a></li>
+            </ul>
+
+            <a class="navbar_toggleBtn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+
+        <script>
+            const toggleBtn = document.querySelector('.navbar_toggleBtn');
+            console.log(toggleBtn);
+            const menu = document.querySelector('.navbar_menu');
+            const icons = document.querySelector('.navbar_icons');
+            toggleBtn.addEventListener('click', function(){
+                menu.classList.toggle('active');
+                icons.classList.toggle('active');
+            });
+
+            // window.addEventListener('scroll',function(){
+            //     if(scrollY <= 350){
+            //         $('.navbar').css('background','transparent');
+            //     }
+            //     else{
+            //         $('.navbar').css('background-color','var(--background-color)');
+            //     }
+            // })
+
+        </script>
+    </body>
+</html>

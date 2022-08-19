@@ -1,0 +1,130 @@
+:root {
+    --text-color: floralwhite;
+    --background-color: lightsteelblue;
+    --accent-color: #E5874A;
+}
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+a:hover{
+    color: var(--text-color);
+}
+
+.navbar{
+    /* 수정부분 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* 수정부분 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: transparent; 
+    이거를 home이랑 information 부분에만 덮어씌여주면 된다*/
+    background-color: var(--background-color);
+    padding: 15px 12px;
+    z-index: 1;
+}
+
+.navbar_logo{
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.navbar_logo i{
+    color:var(--accent-color);
+}
+
+.navbar_menu{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    margin: auto 0;
+}
+
+.navbar_menu li{
+    padding: 8px 12px;
+}
+
+.navbar_menu li:hover{
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    color: var(--text-color);
+}
+
+.navbar_icons{
+    list-style: none;
+    color: var(--text-color);
+    display: flex;
+    padding-left:0;
+    margin: auto 0;
+}
+
+.navbar_icons li{
+    padding: 8px 12px;
+}
+.navbar_icons li:hover,
+.navbar_icons a:hover{
+    color:var(--accent-color);
+}
+
+.navbar_toggleBtn{
+    display: none;
+    position: absolute;
+    top: 13.5px;
+    right: 32px;
+    font-size: 24px;
+}
+.navbar_toggleBtn:hover{
+    color:var(--accent-color);
+}
+
+@media screen and (max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_menu{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0px;
+    } 
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar_icons {
+        display: none;
+        justify-content: space-between;
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .fa-facebook-f{
+        position: relative;
+        left: 9px;
+    }
+
+    .navbar_toggleBtn{
+        display: block;
+        top: 11px;
+    }
+
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display: flex;
+    }
+}
