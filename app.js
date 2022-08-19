@@ -19,6 +19,9 @@ app.get('/tools',(req, res) => {
 app.get('/navbar',(req, res) => {
   res.render('navbar',{})
 });
+app.get('/navbar_test', (req, res) =>{
+  res.render("navbar_test", {});
+})
 
 app.get('/Home',(req, res) => {
     res.render('Home',{});
@@ -33,6 +36,10 @@ app.get('/mdaae',(req, res) => {
 
 app.get("/food", (req, res) => {
     res.render("food", {});
+});
+
+app.get("/login", (req, res) => {
+  res.render("login", {});
 });
 
 app.listen(port, ()=>{
