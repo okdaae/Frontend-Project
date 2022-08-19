@@ -17,30 +17,20 @@ a:hover{
 }
 
 .navbar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px 12px;
-    background:  transparent;
+    /* 수정부분 */
     position: fixed;
-    width: 100%;
-    animation-name: navbar;
-    animation-duration: 2s;
-}
-@keyframes navbar{
-    0%{
-        opacity: 0;
-    }
-    25%{
-        opacity: 0.25;
-    }
-    40%{
-        opacity: 0.5;
-        
-    }
-    60%{
-        opacity: 0.7;
-    }
+    top: 0;
+    left: 0;
+    right: 0;
+    /* 수정부분 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: transparent; 
+    이거를 home이랑 information 부분에만 덮어씌여주면 된다*/
+    background-color: var(--background-color);
+    padding: 15px 12px;
+    z-index: 1;
 }
 
 .navbar_logo{
@@ -54,7 +44,7 @@ a:hover{
 
 .navbar_menu{
     display:flex;
-    align-items: flex-end;
+    align-items: center;
     list-style: none;
     padding-left: 0;
     margin: auto 0;
@@ -63,9 +53,6 @@ a:hover{
 .navbar_menu li{
     padding: 8px 12px;
 }
-/* .login{
-    padding: 8px 12px;
-} */
 
 .navbar_menu li:hover{
     background-color: var(--accent-color);
