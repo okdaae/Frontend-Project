@@ -47,18 +47,17 @@ p {
   vertical-align: middle;
 }
 .tent-img{
-    width: 35%;
+    width: 40%;
     height: 500px;
-    margin-left: 150px;
+    margin-left: 50px;
 }
 .tents-img{
     max-width: 100%;
-    min-width: 50%;
-    object-fit: fill;
     padding-right: 10px;
+    width: 500px;
 }
 .table-first{
-    width: 40%;
+    width: 50%;
     height: 350px;
     text-align: center;
     margin-right: 150px;
@@ -67,6 +66,7 @@ p {
     width: 100%;
     text-align: center;
     height: auto;
+    margin-left: 5px;
 }
 table td{
     font-size: 14px;
@@ -186,4 +186,53 @@ ul, li {
     font-weight: 600;
     text-align: center;
     padding-top: 10px;
+}
+.top{
+    position: fixed;
+    bottom: 45px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    font-size: 50px;
+    color: yellowgreen;
+}
+.tent-btn{
+    position: fixed;
+    bottom: 170px;
+    right: 10px;
+    width: 90px;
+    height: 40px;
+    z-index: 1;
+    border: none;
+    border-radius: 50px;
+    background-color: yellowgreen;
+    color: white;
+    font-size: 20px;
+}
+.Guide-btn{
+    position: fixed;
+    bottom: 120px;
+    right: 10px;
+    width: 90px;
+    height: 40px;
+    z-index: 1;
+    border: none;
+    border-radius: 50px;
+    background-color: yellowgreen;
+    color: white;
+    font-size: 20px;
+}
+.refund-btn{
+    position: fixed;
+    bottom: 70px;
+    right: 10px;
+    width: 90px;
+    height: 40px;
+    z-index: 1;
+    border: none;
+    border-radius: 50px;
+    background-color: yellowgreen;
+    color: white;
+    font-size: 20px;
 }

@@ -22,10 +22,10 @@
     <body>
         <!-- nav-bar -->
      <div id="wrap">  
+      <%-include("navbar.ejs")%>
         <!-- detail-->
        <div class="reserCon01">
        </div>
-       <%-include("navbar.ejs")%>
        <!-- p -->
       
 
@@ -319,8 +319,11 @@
             <br>
             업체명: 캠팡 || 대표자: 5조
           </p>
-
-         
+          <button class="tent-btn">Tent</button>
+          <button class="Guide-btn">Guide</button>
+          <button class="refund-btn">Refund</button>
+          <a href="#" class="top">▲</a>
+          
         </footer>
       </div>
         <!-- offcanvas -->
@@ -342,7 +345,16 @@
 
         <script>
         
-          
+       $('.tent-btn').on('click',function(){
+          window.scrollTo({top: 420, behavior: "smooth"});
+       })
+       $('.Guide-btn').on('click',function(){
+        window.scrollTo({top:1305, behavior:"smooth"});
+       })
+       $('.refund-btn').on('click',function(){
+        window.scrollTo({top: 2375, behavior:"smooth"});
+       })
+        
 
           
         </script>
