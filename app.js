@@ -43,6 +43,10 @@ app.get("/food", (req, res) => {
     res.render("food", {});
 });
 
+app.get("/login", (req, res) => {
+  res.render("login", {});
+});
+
 
 app.listen(port, ()=>{
     console.log("server open: ", port);
