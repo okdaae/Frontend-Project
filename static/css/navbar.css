@@ -23,22 +23,7 @@ a:hover{
     padding: 15px 12px;
     background:  transparent;
     position: fixed;
-    animation-timing-function: linear;
-    animation-name: navbar;
-    animation-duration: 2s;
-}
-@keyframes navbar{
-    0%{
-        opacity: 0;
-        background: transparent;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 2;
-        background-color: skyblue;
-    }
+  
 }
 
 .navbar_logo{
