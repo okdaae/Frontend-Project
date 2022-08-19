@@ -34,6 +34,11 @@ app.get('/mdaae',(req, res) => {
     res.render('mdaae',{});
 });
 
+app.get('/mmdaae',(req, res) => {
+  res.render('mmdaae',{});
+});
+
+
 app.get("/food", (req, res) => {
     res.render("food", {});
 });
