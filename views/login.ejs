@@ -3,12 +3,18 @@
         <meta charset="utf-8">
         <title>login</title>
         <style>
+            :root {
+                --text-color: floralwhite;
+                --background-color: lightsteelblue;
+                --accent-color: #E5874A;
+            }
             .login{
                 width: 410px;
                 position: absolute;
                 top: 50%;
                 left: 50%;  
                 transform: translate(-50%, -50%);
+                text-align: center;
             }
             .login h2{
                 padding: 0 0 20px 0;
@@ -20,29 +26,103 @@
                 /* 줄간격없애기 */
             }
 
-            .login ul{
+            .login > ul{
                 padding-left: 0;
+                padding: 10px 0 0 0;
             }
-            .login li{
+            .login > ul li{
                 padding:0 0 12px 0;
                 list-style: none;
+                text-align: left;
             }
-            .login li input{
+            .login > ul li input{
                 width: 100%;
                 height: 46px;
                 text-indent: 16px;
                 border: 1px solid darkgray;
                 border-radius: 6px;
             }
-            .login li input::-webkit-input-placeholder{
+            .login > ul li input::-webkit-input-placeholder{
                 /* font-size:16px;  */
                 color:darkgray;
                 text-indent: 16px;
             }
-            .login li input[type="checkbox"]{
+            .login > ul li input[type="checkbox"]{
                 position:absolute;
                 left: -3000%;
             }
+            .login > ul li input[type="checkbox"] + label{
+                height: 36px;
+                line-height: 36px;
+                font-size: 13px;
+            }
+            .login > ul li input[type="checkbox"] + label:before {
+                content:"";
+                display: inline-block;
+                margin: 0 7px 0 0;
+                width: 18px;
+                height: 18px;
+                border: 1px solid #666;
+                border-radius: 10px;
+                background-color: white;
+                vertical-align: -5px;
+            }
+            .login > ul li input[type="checkbox"]:checked + label:before{
+                background: var(--accent-color)  url(/static/img/white-check-mark-icon.png) no-repeat center/ 11px auto;
+                border-color: var(--accent-color)
+                /* background: url() no-repeat #666; */
+            }
+
+            .login button{
+                width: 100%;
+                height: 56px;
+                line-height: 56px;
+                background: var(--accent-color);
+                border: var(--accent-color);
+                font-size: 18px;
+                color: var(--text-color);
+            }
+
+            
+            .login div{
+                padding: 0 0 25px 0;
+            }
+            .login div ul{
+                display: flex;
+                justify-content: center;
+                list-style: none;
+            }
+            .login div ul li{
+                position: relative;
+                padding: 0 19px;
+            }
+            .login div ul li ~ li:after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 5px;
+                height: 14px;
+                width: 1px;
+                background: black;
+                transform: rotate(25deg);
+            }
+            a{
+                color: black;
+                text-decoration: none;
+            }
+            .login div ul li a{
+                font-size: 14px;
+            }
+
+            .login > a{
+                font-size: 14px;
+                color: #666;
+                /* padding: 0 0 1px 0; */
+                border-bottom: 1px solid #666;
+                /* 혼자 있기 때문에 boder로 줘도 괜찮은데 */
+                /* 다른 것과 같이 있을 경우에는 after써서 position을 주는 게 나음 */
+            }
+            
         </style>
     </head>
     <body>
@@ -51,13 +131,18 @@
             <ul>
                 <li><input type="text" placeholder="아이디" title="아이디입력"></li>
                 <li><input type="password" placeholder="비밀번호" title="비밀번호입력"></li>
-                <li><input type="checkbox" id="chk_id"><label for="chk_id">아이디저장</label></li>
+                <li><input type="checkbox" id="chk_id">
+                    <!-- before -->
+                    <label for="chk_id">아이디저장</label>
+                </li>
                 <li><button>로그인</button></li>
             </ul>
             <div>
-                <a href="">회원가입</a>
-                <a href="">아이디찾기</a>
-                <a href="">비밀번호찾기</a>
+                <ul>
+                    <li><a href="">회원가입</a></li>
+                    <li><a href="">아이디찾기</a></li>
+                    <li><a href="">비밀번호찾기</a></li>
+                </ul>
             </div>
             <a href="">비회원 주문조회</a>
         </section>
