@@ -34,6 +34,7 @@ a:hover{
     animation-name: navbar;
     animation-duration: 2s;
 }
+
 @keyframes navbar{
     0%{
         opacity: 0;
