@@ -23,9 +23,6 @@ app.get('/navbar_test', (req, res) =>{
   res.render("navbar_test", {});
 })
 
-app.get('/Home',(req, res) => {
-    res.render('Home',{});
-});
 app.get('/Information',(req, res) => {
     res.render('Information',{});
 });
