@@ -166,6 +166,10 @@
     font-weight: 600;
     font-size: 20px;
   }
+  .hover-text{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+  }
   .item-guide{
     display: inline-block;
     min-width: 80px;
