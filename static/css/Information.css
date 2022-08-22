@@ -189,12 +189,12 @@ ul, li {
 }
 .top{
     position: fixed;
-    bottom: 45px;
-    right: 15px;
+    bottom: 30px;
+    right: 30px;
     width: 40px;
     height: 40px;
     z-index: 1;
-    font-size: 50px;
+    font-size: 30px;
     color: yellowgreen;
 }
 .tent-btn{

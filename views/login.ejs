@@ -81,6 +81,10 @@
                 border: var(--accent-color);
                 font-size: 18px;
                 color: var(--text-color);
+                border-radius: 50px;
+            }
+            .login button:hover{
+                cursor: pointer;
             }
 
             
@@ -126,6 +130,7 @@
         </style>
     </head>
     <body>
+        <%-include("navbar_test.ejs")%>
         <section class="login">
             <h2>로그인</h2>
             <ul>
@@ -139,9 +144,9 @@
             </ul>
             <div>
                 <ul>
-                    <li><a href="">회원가입</a></li>
-                    <li><a href="">아이디찾기</a></li>
-                    <li><a href="">비밀번호찾기</a></li>
+                    <li><a href="" style="color: black;">회원가입</a></li>
+                    <li><a href="" style="color: black;">아이디찾기</a></li>
+                    <li><a href="" style="color: black;">비밀번호찾기</a></li>
                 </ul>
             </div>
             <a href="">비회원 주문조회</a>

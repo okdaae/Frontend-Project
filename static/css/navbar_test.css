@@ -144,3 +144,19 @@ a:hover{
         display: flex;
     }
 }
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    height: 50px;
+    background-color: var(--background-color);
+    border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: chocolate;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track{
+    background-color: aliceblue;
+    height: 500px;
+}
