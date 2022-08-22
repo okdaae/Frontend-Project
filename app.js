@@ -6,7 +6,7 @@ app.use("/static", express.static("static"));
 const port = 8000;
 
 app.get("/", (req, res) => {
-  res.render("test", {});
+  res.render("mmdaae", {});
 });
 app.get("/one", (req, res) => {
   res.render("one", {});
