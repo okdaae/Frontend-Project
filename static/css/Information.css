@@ -39,19 +39,7 @@ p {
 
 /* 텐트 이용 */
 
-.container{
-    display: flex;
-    justify-content: space-around;
-}
-.tent-images{
-    width: 50%;
-    height: 500px;
-}
 
-.tent-table{
-    width: 50%;
-    background-color: #E5874A;
-}
 /* tent css 끝 */
 
 
@@ -59,30 +47,80 @@ p {
 .Using-Guide{
     display: flex;
     width: 100%;
-    height: 1100px;
+    height: 1000px;
     text-align: center;
     vertical-align: middle;
 }
+@media screen and (max-width: 768px){
+    .Using-Guide{
+        display: flex;
+        width: 100%;
+        height: 1000px;
+        text-align: center;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;flex-direction: column;
+    }
+}
 .Guide-img{
     max-width: 100%;
-    min-width: 50%;
-    width: auto;
+    min-width: 55%;
+    width: 30%;
     height: 350px;
     padding-right: 10px;
 }
 .Guide-text{
     width: 70%;
-    height: 1100px;
+    height: 900px;
     text-align: left;
     font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+@media screen and (max-width: 950px){
+    .Guide-img{
+        min-width: 100%;
+        width: 100%;
+        height: 100%;
+    }
+    .Guide-text{
+        width: 70%;
+        height: 900px;
+        text-align: left;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 50px;
+    }
+    .guide-text1{
+        width: 400px;
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 750px;
+        background-color: aliceblue;
+        border-radius: 15px;
+    }
+    .Guide-img{
+        max-width: 100%;
+        min-width: 50%;
+        width: 100%;
+        height: auto;
+        padding-right: 10px;
+    }
+}
 .guide-text1{
+    width: 400px;
     display: flex;
     flex-direction: row;
-
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 750px;
+    background-color: aliceblue;
+    border-radius: 15px;
 }
 ul, li {
     list-style: none;
@@ -96,9 +134,9 @@ ul, li {
     height: auto;
     padding-left: 50px;
 }
-@media (min-width: 150px) {
+@media (max-width: 450px) {
     .using-img{
-        width: 500px;
+        width: 625px;
         height: 400px;
     }
 }
@@ -109,29 +147,55 @@ ul, li {
     height: 500px;
     text-align: center;
     vertical-align: middle;
-   
+    justify-content: space-around;
 }
 .refund-img-div{ 
-    width: 50%;
+    width: 55%;
     height: 500px;
-    margin-left: 30px;
+    justify-items: end;
 }
 .refund-img{
     max-width: 100%;
     min-width: 50%;
-    width: auto;
+    width: 553px;
     height: 350px;
+   
 }
 .refund-text{
-    width: 50%;
+    width: 55%;
     height: 500px;
-    margin-right: 30px;
     text-align: left;
     font-weight: 700;
-    overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    padding-right: 50px;
 }
+@media screen and (max-width: 950px){
+    .refund{
+        display: flex;
+        width: 100%;
+        height: 500px;
+        text-align: center;
+        vertical-align: middle;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .refund-img-div{ 
+        width: 100%;
+        height: 100%;
+    }
+    .refund-text{
+        width: 100%;
+        height: 800px;
+        text-align: center;
+        font-weight: 700;
+        overflow: scroll;
+        text-overflow: ellipsis;
+       font-size: 13px;
+       overflow-x: none;
+    }
+}
+
 .refund-table{
     text-align: center;
     width: 40%;
@@ -158,6 +222,14 @@ ul, li {
     border: 1px solid #eeee;
     padding: 20px;
 }
+@media screen and (max-width:758px){
+    .refund-table{
+        text-align: center;
+        width: 100%;
+        height: 700px;
+        margin: auto;
+    }
+}
 .footer-container{
     width: 100%;
     height: auto;
@@ -171,7 +243,7 @@ ul, li {
 .top{
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 50px;
     width: 40px;
     height: 40px;
     z-index: 1;
@@ -187,7 +259,7 @@ ul, li {
 .tent-btn{
     position: fixed;
     bottom: 200px;
-    right: 10px;
+    right: 20px;
     width: 90px;
     height: 40px;
     z-index: 0;
@@ -212,7 +284,7 @@ ul, li {
 .Guide-btn{
     position: fixed;
     bottom: 140px;
-    right: 10px;
+    right: 20px;
     width: 90px;
     height: 40px;
     z-index: 0;
@@ -233,7 +305,7 @@ ul, li {
 .refund-btn{
     position: fixed;
     bottom: 80px;
-    right: 10px;
+    right: 20px;
     width: 90px;
     height: 40px;
     z-index: 0;
