@@ -319,9 +319,11 @@
             <br>
             업체명: 캠팡 || 대표자: 5조
           </p>
-          <button class="w3-lime">asdq</button>
-          <button class="w3-lime">qasd</button>
-          <button class="w3-lime">qasd</button>
+          <div class="tent-btn" id="tent-btn"><span id="tent-span">Tent</span></div>
+          <div class="Guide-btn" id="guide-btn"><span id="guide-span">Guide</span></div>
+          <div class="refund-btn" id="refund-btn"><span id="refund-span">Refund</span></div>
+          <a href="#" class="top">Top</a>
+          
         </footer>
       </div>
         <!-- offcanvas -->
@@ -343,7 +345,16 @@
 
         <script>
         
-     
+       $('.tent-btn').on('click',function(){
+          window.scrollTo({top: 350, behavior: "smooth"});
+       })
+       $('.Guide-btn').on('click',function(){
+        window.scrollTo({top:1305, behavior:"smooth"});
+       })
+       $('.refund-btn').on('click',function(){
+        window.scrollTo({top: 2375, behavior:"smooth"});
+       })
+        
        window.addEventListener('scroll',function(){
                 if(scrollY <= 350){
                     $('.navbar').css('background','transparent');
