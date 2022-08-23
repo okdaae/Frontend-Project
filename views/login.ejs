@@ -5,7 +5,8 @@
         <!-- bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
-        
+        <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <style>
             :root {
                 --text-color: floralwhite;
@@ -141,24 +142,6 @@
     </head>
     <body>
         <%-include("navbar_test.ejs")%>
-
-        <section class="login">
-            <h2>로그인</h2>
-            <ul>
-                <li><input type="text" placeholder="아이디" title="아이디입력"></li>
-                <li><input type="password" placeholder="비밀번호" title="비밀번호입력"></li>
-                <li><input type="checkbox" id="chk_id">
-                    <!-- before -->
-                    <label for="chk_id">아이디저장</label>
-                </li>
-                <li><button>로그인</button></li>
-                <li><div id="naverIdLogin"></div></li>
-            </ul>
-            <div>
-                <ul>
-                    <li><a href="/member" style="color: black;" target="_self">회원가입</a></li>
-                    <li><a href="" style="color: black;">아이디찾기</a></li>
-                    <li><a href="" style="color: black;">비밀번호찾기</a></li>
         <div id="wrapper">
             <section class="login">
                 <h2>로그인</h2>
@@ -170,10 +153,11 @@
                         <label for="chk_id">아이디저장</label>
                     </li>
                     <li><button>로그인</button></li>
+                    <div id="naver_id_login"></div>
                 </ul>
                 <div>
                     <ul>
-                        <li><a href="/member" style="color: black;">회원as가입</a></li>
+                        <li><a href="/member" style="color: black;">회원가입</a></li>
                         <li><a href="" style="color: black;">아이디찾기</a></li>
                         <li><a href="" style="color: black;">비밀번호찾기</a></li>
                     </ul>
@@ -185,53 +169,16 @@
         <%-include("footer.ejs")%>
 
     </body>
-    <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
+
     <script>
-        const naverLogin = new naver.LoginWithNaverId(
-   {
-    clientId: "xfjjB882kqibOxF6Tm2p",
-    callbackUrl: "http://localhost:8000/login",
-    loginButton: {color: "green", type: 2, height: 40}
-    }
-   );
+    var naver_id_login = new naver_id_login("xfjjB882kqibOxF6Tm2p", "http://localhost:8000/login");
+  	var state = naver_id_login.getUniqState();
+  	naver_id_login.setButton("white", 2,40);
+  	naver_id_login.setDomain("http://localhost:8000/login");
+  	naver_id_login.setState(state);
+  	naver_id_login.setPopup();
+  	naver_id_login.init_naver_id_login();
+
   
-
-    naverLogin.init();
-    naverLogin.getLoginStatus(function (status) {
-      if (status) {
-          const nickName=naverLogin.user.getNickName();
-          const age=naverLogin.user.getAge();
-          const birthday=naverLogin.user.getBirthday();
-
-          if(nickName===null||nickName===undefined ){
-            alert("별명이 필요합니다. 정보제공을 동의해주세요.");
-            naverLogin.reprompt();
-            return ;  
-         }else{
-          setLoginStatus();
-         }
-	}
-    });
-    console.log(naverLogin);
-
-    function setLoginStatus(){
-    
-      const message_area=document.getElementById('message');
-      message_area.innerHTML=`
-      <h3> Login 성공 </h3>
-      <div>user Nickname : ${naverLogin.user.nickname}</div>
-      <div>user Age(범위) : ${naverLogin.user.age}</div>
-      <div>user Birthday : ${naverLogin.user.birthday}</div>
-      `;
-     
-      const button_area=document.getElementById('button_area');
-      button_area.innerHTML="<button id='btn_logout'>로그아웃</button>";
-
-      const logout=document.getElementById('btn_logout');
-      logout.addEventListener('click',(e)=>{
-        naverLogin.logout();
-	location.replace("http://localhost:8000/login");
-      })
-    }
     </script>
 </html>
