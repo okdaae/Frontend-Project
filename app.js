@@ -16,9 +16,6 @@ app.get('/tools',(req, res) => {
     res.render('tools',{})
 });
 
-app.get('/navbar',(req, res) => {
-  res.render('navbar',{})
-});
 app.get('/navbar_test', (req, res) =>{
   res.render("navbar_test", {});
 })
@@ -38,6 +35,9 @@ app.get('/mmdaae',(req, res) => {
 
 app.get("/food", (req, res) => {
     res.render("food", {});
+});
+app.get("/food_new", (req, res) => {
+  res.render("food_new", {});
 });
 
 app.get('/login', (req, res) => {
