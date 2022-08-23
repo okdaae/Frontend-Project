@@ -325,7 +325,7 @@ ul, li {
     color: yellowgreen;
 }
 .top:hover{
-    color: #E5874A;
+    color: black;
     animation-name: bounce;
     animation-duration: 1s;
 
