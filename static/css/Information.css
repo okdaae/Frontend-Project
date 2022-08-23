@@ -2,7 +2,10 @@
     position: relative;
     overflow: hidden;
 }
-
+th{
+    background-color: #E5874A;
+    font-weight: 900;
+}
 
 .reserCon01{
     width: 100%;
@@ -69,9 +72,9 @@ p {
     height: 200px;
     align-items: center;
 }
-.tent-table-form th{
-    background-color: lightsteelblue ;
-    color: black;
+.tent-table-form td{
+    padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
 }
 @media screen and (max-width:768px){
     .tent{
@@ -118,7 +121,7 @@ p {
 .Using-Guide{
     display: flex;
     width: 100%;
-    height: 900px;
+    height: 850px;
     text-align: center;
     vertical-align: middle;
 }
@@ -144,12 +147,23 @@ p {
 }
 .Guide-text{
     width: 70%;
-    height: 900px;
+    height: 1200px;
     text-align: left;
     font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.guide-text1{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 600px;
+    background-color: aliceblue;
+    border-radius: 15px;
 }
 @media screen and (max-width: 950px){
     .Guide-img{
@@ -171,8 +185,7 @@ p {
         display: flex;
         flex-direction: row;
         overflow: scroll;
-        overflow-x: hidden;
-        height: 750px;
+        height: 500px;
         background-color: aliceblue;
         border-radius: 15px;
     }
@@ -183,16 +196,6 @@ p {
         height: auto;
         padding-right: 10px;
     }
-}
-.guide-text1{
-    width: 400px;
-    display: flex;
-    flex-direction: row;
-    overflow: scroll;
-    overflow-x: hidden;
-    height: 750px;
-    background-color: aliceblue;
-    border-radius: 15px;
 }
 ul, li {
     list-style: none;
