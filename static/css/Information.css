@@ -1,3 +1,4 @@
+
 #wrap{
     position: relative;
     overflow: hidden;
@@ -12,6 +13,7 @@ th{
     background: url(/static/img/information/01_01.jpg) no-repeat center center;
     background-size: cover;
     padding-bottom: 35%;
+    
 }
 .sub_title p{
     color: #797878;
@@ -408,7 +410,6 @@ ul, li {
     40% {transform: translateY(-30px);}
     60% {transform: translateY(-20px);}
 } 
-
 .navbar{
-    background-color: transparent; 
+    background-color: transparent !important; 
 }
