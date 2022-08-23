@@ -1,247 +1,263 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
+  <title>food</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>    
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/acfe1c41fb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/css/navbar.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js">
+  </script>
+
   <style>
-    *{
-      box-sizing: border-box;
-    }
-    body{
-      padding-top: 100px;
-    }
-    .titles{
-      padding: 40px 40px 0 40px;
-      color: #E5874A;
-      font-size: 30px;
-      margin-bottom: 30px;
-    }  
-    .line{
-      border-style:solid;
-      border-width: 1px;
-      border-left-width: 0;
-      border-right-width: 0;
-      border-bottom-width: 0;
-      margin: 0 auto 28px ;
-    }
-    .snack{
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
-    }
-    .snack_menu{
-      text-align: center;
-      padding-left: 50px;
-    }
-    .snack_menu li{
-      list-style: none;
-    }
-    .food_name{
-      display: flex;
-      
-    }
-    .food_name li{
-      margin-right:auto;
-      margin-left: auto;
-      list-style: none;
-    }
+    :root {
+  --accent-color: #E5874A;
+}
+.container {
+  font-family: 'ChosunGu';
+  line-height: 180%;
+}
 
-    .containerbox {
-      display: flex;
-      padding: 20px;
-    }
-    .image {
-      width: 100%;
-      height: 100%;
-    }
-    .overlay {
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      right: 0;
-      background-color:#E5874A;
-      overflow: hidden;
-      width: 100%;
-      height:0;
-      transition: .5s ease;
-      
-    }
-    
-    .containerbox:hover .overlay {
-      bottom: 0;
-      height: 100%;
-    }
-    .text {
-      color: white;
-      font-size: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-    .bbq_user{
-      text-align: center;
-      vertical-align: middle;
-    }
-    .bbq_box{
-      justify-content:center; 
-      align-items:center;
-    }
+.food-title {
+  margin-top: 100px;
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  font-weight: 600;
+}
 
-  .food-kit{
-    display: flex;
-    margin-left: 20px;
-  }
+.kit-list,
+.snack-list,
+.bbq-list {
+  margin: 25px;
+}
+.bbq-list a,
+.kit-list a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
 
-  .kit-name{
-    display: none;
-  }
-  .kit-menu{
-    display: inline-block;
-    position: relative;
-  }
-  .kit-menu:hover:after,
-  .kit-menu:hover > .kit-name{
-    display: block;
-  }
-  .kit-menu:after{
-    content:'';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
-  }
-  .kit-menu{
-    overflow: hidden;
-  }
-  .kit-menu img{
-    height: 270px;
-  }
-  .kit-menu:hover img{
-    filter: blur(0.5px);
-    transform: scale(1.2);
-    transition: 1s;
-  }
-  .kit-img{
-    margin: 10px;
-  }
-  .kit-name {
-    position: absolute;
-    top: 120px;
-    left: 50px;
-    color: #fff;
-    background-color: #E5874A;
-    border-radius: 10px;
-    z-index: 20;
-    font-weight: 700;
-    font-size: 20px;
-  }
-  .menu-dubu{
-    left: 90px;
-  }
+.snack-list span:hover,
+.bbq-list a:hover,
+.kit-list a:hover {
+  color: var(--accent-color);
+
+}
+
+.kit-list span {
+  margin: 8px 10px;
+  display: inline-block;
+}
+
+.kit-imgs,
+.bbq-imgs {
+  margin: 50px 0px;
+  padding-left: 0;
+
+}
+
+.kit-imgs li,
+.bbq-imgs li {
+  margin: 30px 0;
+  text-align: center;
+  list-style: none;
+}
+
+.kit-imgs li div,
+.bbq-imgs li div div:nth-child(2) {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.kit-imgs li>div,
+.bbq-imgs li>div {
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.kit-imgs li>div:hover,
+.kit-imgs .highlight {
+  box-shadow: 0px 0px 40px -10px lightgray;
+}
+
+.kit-imgs img,
+.bbq-imgs img {
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+.snack-list span,
+.bbq-list span {
+  display: inline-block;
+  margin: 8px 10px;
+  color: black;
+  text-align: center;
+}
+
+.bbq-imgs li>div:hover,
+.bbq-imgs .highlight {
+  box-shadow: 0px 0px 40px -10px lightgray;
+}
+
+.bbq-info>div {
+  display: flex;
   
+  margin: 25px; 
+  padding-top: 8px;
+}
+
+.bbq-info h5 {
+  margin-right: 50px;
+}
+
+.bbq-guide1 li{
+  margin-left: 90px;
+}
+
+
 
 
 
   </style>
 </head>
-
 <body>
   <%-include("navbar_test.ejs")%>
-  <div class="titles">간편요리</div>
-  <div class="line"></div>
-  <div class="food-kit row">
-    <div class="kit-img col ">
-    <div class="kit-menu"><img src="/static/img/food/마파두부.jpg" alt="">
-    <p class="kit-name menu-dubu">마파두부</p></div>
-    </div>
-    <div class="kit-img col">
-      <div class="kit-menu"><img src="/static/img/food/나베.jpg" alt="">
-      <p class="kit-name">소고기 밀푀유 나베</p></div>
-    </div>
-    <div class="kit-img col">
-      <div class="kit-menu"><img src="/static/img/food/떡볶이.jpg" alt="">
-      <p class="kit-name">&nbsp;&nbsp;우삼겹 떡볶이&nbsp;</p></div>
-    </div>
-    <div class="kit-img col">
-      <div class="kit-menu"><img src="/static/img/food/우동전골.jpg" alt="">
-      <p class="kit-name">김치어묵 우동전골</p></div>
-    </div>
-  </div>
   
-  <div class="titles">매점</div>
-  <div class="line"></div>
-  <div class="snack">
-    <ul class="snack_menu">
-      <li>숟가락</li>
-      <li>젓가락</li>
-      <li>포크</li>
-      <li>접시</li>
-      <li>종이컵</li>
-    </ul>
-    <ul class="snack_menu">
-      <li>부탄가스</li>
-      <li>이소가스</li>
-      <li>장작</li>
-    </ul>
-    <ul class="snack_menu">
-      <li>라면</li>
-      <li>과자</li>
-      <li>쌈장</li>
-      <li>햇반</li>
-    </ul>
-    <ul class="snack_menu">
-      <li>물</li>
-      <li>커피</li>
-      <li>술</li>
-      <li>탄산음료</li>
-      <li>얼음</li>
-    </ul>
-  </div>
-  <div class="titles">바베큐</div>
-  <div class="line"></div>
-  <div class="bbq_box row">
-    <div class="col-12 col-sm-6 col-md-6 col-lg-4 containerbox">
-      <div class="w-100 position-relative">
-        <img src="/static/img/food/bbq.jpg" class="image">
-        <div class="overlay">
-          <div class="text">BBQ SET
-            <br><br>삼겹살 500g
-            <br>목살 500g
-            <br>소시지
-            <br>쌈set 
-            <br>쌈장 
-            <br>새송이버섯
-            <br>김치
+  <div class="container">
+    <h3 class="food-title">밀키트</h3>
+    <hr>
+    <div class="kit-list">
+      <span data-target="1"><a href="#11">소고기 밀푀유나베</a></span>
+      <span data-target="2"><a href="#22">우삼겹 떡볶이</a></span>
+      <span data-target="3"><a href="#33">마파두부</a></span>
+      <span data-target="4"><a href="#44">김치어묵 우동전골</a></span>
+      <span data-target="5"><a href="#55">트리플 크림파스타</a></span>
+      <span data-target="6"><a href="#66">의정부식 부대찌개</a></span>
+    </div>
+    <hr>
+    
+    <ul class="kit-imgs">
+      <div class="row">
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="1"id="11">
+            <img src="/static/img/food/나베.jpg">
+            <div>소고기 밀푀유나베</div>
           </div>
-        </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="2"id="22">
+            <img src="/static/img/food/떡볶이.jpg">
+            <div>우삼겹 떡볶이</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="3"id="33">
+            <img src="/static/img/food/마파두부.jpg">
+            <div>마파두부</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="4"id="44">
+            <img src="/static/img/food/우동전골.jpg">
+            <div>김치어묵 우동전골</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="5"id="55">
+            <img src="/static/img/food/크림.jpg">
+            <div>트리플 크림파스타</div>
+          </div>
+        </li>
+        <li class="col-12 col-md-6 col-xl-4">
+          <div data-source="6"id="66">
+            <img src="/static/img/food/부대.jpg">
+            <div>의정부식 부대찌개</div>
+          </div>
+        </li>
       </div>
-    </div>   
-    <div class="col-12 col-sm-6 col-md-6 col-lg-4 containerbox">
-      <div class="w-100 position-relative">
-        <img src="/static/img/food/fire.jpg" class="image">
-        <div class="overlay">
-          <div class="text">FIRE SET
-            <br><br>화롯대
-            <br>집게
-            <br>숯
-            <br>or 
-            <br>장작(1회)
-          </div>
-        </div>
+    </ul> 
+    
+    <h3 class="food-title">매점</h3>
+    <hr>
+    <div class="snack-list">
+      <span>숟가락</span>
+      <span>젓가락</span>
+      <span>포크</span>
+      <span>접시</span>
+      <span>종이컵</span>
+      <span>부탄가스</span>
+      <span>이소가스</span>
+      <span>장작</span>
+      <span>라면</span>
+      <span>과자</span>
+      <span>쌈장</span>
+      <span>햇반</span>
+      <span>물</span>
+      <span>커피</span>
+      <span>술</span>
+      <span>탄산음료</span>
+      <span>얼음</span>
+    </div>
+    <hr>
+
+  <h3 class="food-title">바베큐</h3>
+  <hr>
+  <div class="bbq-list">
+    <span data-target="7"><a href="#77">바베큐 set</a></span>
+    <span data-target="7"><a href="#77">파이어 set</a></span>
+  </div>
+  <hr>
+    <ul class="bbq-imgs">
+        <div class="row">
+          <li class=" col-12 col-md-6 col-xl-4">
+              <div>
+                <div data-source="7"id="77">
+                  <img src="/static/img/food/bbq.jpg">
+                  <div>바베큐 set</div>
+                  <div>삼겹살500g 목살300g 소시지  <br>야채세트 김치 쌈장 햇반2개</div>
+                </div>
+              </div> 
+          </li>
+          <li class="col-12 col-md-6 col-xl-4">
+            <div>
+              <div data-source="7"id="77">
+                <img src="/static/img/food/fire.jpg">
+                <div>파이어 set</div>
+                <div> 화롯대 숯 or 장작 <br>집게 일회용그릴 마시멜로</div>
+              </div>
+            </div> 
+          </li>
+      </div>
+  </ul>
+  <hr>
+    
+    <div class="bbq-info">
+      <h3 class="food-title">바베큐 이용 안내</h3>
+      <hr>
+      <div class="bbq-guide1">
+        <h5>이용료</h5>
+        <ol>
+          <li>바베큐 set  :  50000원</li>
+          <li>파이어 set  :  20000원</li>
+        </ol>
+      </div>
+      <hr>
+      <div class="bbq-guide2">
+        <h5>바베큐 주의사항</h5>
+        <ol>
+          <li>바베큐세트는 예약만 이용가능합니다.</li>
+          <li>숯과 장작은 1회 제공됩니다.</li>
+        </ol>
       </div>
     </div>
-    <div class="bbq_user col-12 col-sm-6 col-md-6 col-lg-4">
-      <div>바베큐set 미리 예약해주셔야 사용 가능합니다.</div>
-      <div>자연의 경치를 바라보며 좋은 시간 보내시길 바랍니다.</div>
-      <div>바베큐 set : 50,000원 (인원수상관없이) / 현장결제</div>
-      <div>파이어 set : 20,000원 (인원수상관없이) / 현장결제</div>
-      <div> 매너시간 : 23:00시 까지 </div>
-    </div>
   </div>
+  <%-include("footer.ejs")%>
+
 </body>
 </html>
-  
