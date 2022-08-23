@@ -38,8 +38,79 @@ p {
 }
 
 /* 텐트 이용 */
+.tent{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.tent-img{
+    width: 500px;
+    height: 500px;
+    vertical-align: middle;
+    text-align: center;
 
+}
+.tent-table{
+    width: 50%;
+    height: 600px;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    margin-top: 150px;
+}
+.tent-table-form{
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+}
+.tent-table-form th{
+    background-color: lightsteelblue ;
+    color: black;
+}
+@media screen and (max-width:768px){
+    .tent{
+        width: 100%;
+        height: 900px;
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .tent-img{
+        width: 500px;
+        height: 600px;
+        vertical-align: middle;
+        text-align: center;
+        align-items: center;
+    }
+    .tent-table{
+        width: 100%;
+        height: 600px;
+        text-align: center;
+        vertical-align: middle;
+        align-items: center;
+        margin-top: 150px;
+    }
+}
+.tent-img img{
+    width: 500px;
+    height: 500px;
+    max-width: 100%;
+}
+@media screen and (max-width: 768px){
+    .tent-img img{
+        width: 500px;
+        height: 500px;
+        max-width: 100%;
+    }
+}
 /* tent css 끝 */
 
 
@@ -47,7 +118,7 @@ p {
 .Using-Guide{
     display: flex;
     width: 100%;
-    height: 1000px;
+    height: 900px;
     text-align: center;
     vertical-align: middle;
 }
@@ -58,9 +129,10 @@ p {
         height: 1000px;
         text-align: center;
         vertical-align: middle;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
-        vertical-align: middle;flex-direction: column;
+        vertical-align: middle;
+        flex-direction: column;
     }
 }
 .Guide-img{
@@ -144,7 +216,7 @@ ul, li {
 .refund{
     display: flex;
     width: 100%;
-    height: 500px;
+    height: 400px;
     text-align: center;
     vertical-align: middle;
     justify-content: space-around;
@@ -173,7 +245,7 @@ ul, li {
     .refund{
         display: flex;
         width: 100%;
-        height: 500px;
+        height: 800px;
         text-align: center;
         vertical-align: middle;
         flex-direction: column;
@@ -189,9 +261,8 @@ ul, li {
         height: 800px;
         text-align: center;
         font-weight: 700;
-        overflow: scroll;
         text-overflow: ellipsis;
-       font-size: 13px;
+       font-size: 15px;
        overflow-x: none;
     }
 }
