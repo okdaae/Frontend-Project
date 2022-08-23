@@ -40,7 +40,7 @@ app.get("/food", (req, res) => {
     res.render("food", {});
 });
 
-app.get("/login", (req, res) => {
+app.get('/login', (req, res) => {
   res.render("login", {});
 });
 
