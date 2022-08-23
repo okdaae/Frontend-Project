@@ -15,7 +15,7 @@ th{
     padding-bottom: 35%;
     animation-name: carousel;
     animation-duration: 15s;
-    animation-direction: normal;
+    animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
 }
 @keyframes carousel{
