@@ -14,9 +14,10 @@ th{
     background-size: cover;
     padding-bottom: 35%;
     animation-name: carousel;
-    animation-duration: 15s;
-    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-direction: normal;
     animation-iteration-count: infinite;
+    animation-fill-mode: forwards, backwards;
 }
 @keyframes carousel{
     0%{
@@ -24,26 +25,27 @@ th{
         background-size: cover;
         width: 100%;
         padding-bottom: 35%;
+        display: none;
     }
-    20%{
+    30%{
         background: url(/static/img/information/camping-car.jpg) no-repeat  center;
         background-size: cover;
         width: 100%;
         padding-bottom: 35%;
     }
-    40%{
+    45%{
         background: url(/static/img/information/campping04.jpg)no-repeat center;
         background-size: cover;
         width: 100%;
         padding-bottom: 35%;
     }
-    60%{
+    65%{
         background: url(/static/img/information/campping05.jpg)no-repeat center center;
         background-size: cover;
         width: 100%;
         padding-bottom: 35%;
     }
-    80%{
+    85%{
         background: url(/static/img/information/BBQ01.jpg)no-repeat center center;
         background-size: cover;
         width: 100%;
