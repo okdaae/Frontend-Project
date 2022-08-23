@@ -9,12 +9,16 @@
         scroll-behavior: smooth;
       }
       #main{
-        background-color: #fff;
+       
       }
       .section{
         width: 1200px;
         margin: auto;
         margin-top: 100px;
+      }
+      .play-contents{
+        width: 1200px;
+        margin: 0 auto;
       }
       .title{
       position: relative;
@@ -30,24 +34,21 @@
       .title-group{
         display: flex;
         flex-direction: row;
-        align-items: center;
+        /* align-items: center; */
         position: relative;
+        justify-content: space-between;
       }
       .button-group:hover{
         background-color: azure;
       }
       .button-group{
-        position: absolute;
-        right: 20px;
-        top: 0;
-        right: -217px;
       }
       .adress-title{
         font-size: 26px;
         line-height: 38px;
         color: #e5874a;
       }
-      a{
+      .button-group a{
         text-decoration: none;
         display: block;
         color: #fff;
@@ -173,7 +174,6 @@
   .item-guide{
     display: inline-block;
     min-width: 80px;
-    margin-bottom: 23px;
     text-align: center;
     letter-spacing: -.6px;
     color: #666;
@@ -212,47 +212,58 @@
     opacity: 0;
   }*/
   /*------------------------------ 미디어쿼리*/
-   @media screen and (max-width:768px) {
+  @media screen and (min-width:500px) and (max-width:768px) {
     .title{
-        font-size: 16px;
-        padding: 20px 20px;
+      font-size: 16px;
     }
-    /* .map{
-        margin: auto;
-    } */
+    .map{
+      width: 468px;
+      margin-left: 7px;
+    }
     .iframe-img{
-        width: 700px;
+      width: 100%;
     }
-    .title--{
-        font-size: 15px;
+    h3{
+      display: inline-block;
     }
-    .adress-title{
-        font-size: medium;
-        padding-right: 207px;
+    .title-bullet::after{
+      width: 500px;
     }
-    .title-group{
-        display: inline-block;
-    }
-    .icon{
-        margin: 10px;
+    .item-guide{
+      min-width: 44px;
     }
     .item-title{
-        font-size: 14px;
+      width: 149px;
     }
-    .sub-text{
-        font-size: 14px;
+    .adress-title{
+      font-size: 18px;
     }
-    .item-description{
-        font-size: 14px;
+    .title-group{
+      flex-direction: column;
     }
     .banner-img img{
-        width: 160px;
-        height: 251px;
+      width: 429px;
     }
-    .hover-text{
-      font-size: 15px;
-      font-weight: 700;
-    }
-
   }
-  
+    @media screen and (min-width:769px) and (max-width:920px) {
+      .map{
+        width: 749px;
+        margin: 7px 7px;
+      }
+      .iframe-img{
+        width: 100%;
+      }
+      .title-group{
+        flex-direction: column;
+      }
+    }
+      @media screen and (min-width:968px) and (max-width:1200px){
+        .map{
+          width: 931px;
+          margin-left: 12px;
+        }
+        .iframe-img{
+          width: 931px;
+        }
+      }
+    
