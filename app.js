@@ -43,6 +43,8 @@ app.get("/food", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login", {});
 });
+
+
 app.get('/member', (req, res) => {
   res.render("member", {});
 });
