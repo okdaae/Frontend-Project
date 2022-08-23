@@ -15,7 +15,7 @@ th{
     padding-bottom: 35%;
     animation-name: carousel;
     animation-duration: 15s;
-    animation-direction: normal;
+    animation-direction: alternate-reverse;
     animation-iteration-count: infinite;
 }
 @keyframes carousel{
@@ -35,21 +35,25 @@ th{
         background: url(/static/img/information/campping04.jpg)no-repeat center;
         background-size: cover;
         width: 100%;
+        padding-bottom: 35%;
     }
     60%{
         background: url(/static/img/information/campping05.jpg)no-repeat center center;
         background-size: cover;
         width: 100%;
+        padding-bottom: 35%;
     }
     80%{
         background: url(/static/img/information/BBQ01.jpg)no-repeat center center;
         background-size: cover;
         width: 100%;
+        padding-bottom: 35%;
     }
     100%{
         background: url(/static/img/information/drink.jpg)no-repeat center center;
         background-size: cover;
         width: 100%;
+        padding-bottom: 35%;
     }
 }
 .sub_title p{
