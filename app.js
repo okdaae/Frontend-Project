@@ -44,7 +44,8 @@ app.get("/login", (req, res) => {
   res.render("login", {});
 });
 
-app.get("/member", (req, res) => {
+
+app.get('/member', (req, res) => {
   res.render("member", {});
 });
 

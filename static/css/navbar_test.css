@@ -36,9 +36,11 @@ body{
 @keyframes navbar{
     0%{
         opacity: 0;
+       
     }
     25%{
         opacity: 0.25;
+        
     }
     40%{
         opacity: 0.5;
@@ -46,8 +48,11 @@ body{
     }
     60%{
         opacity: 0.7;
+        
     }
 }
+
+
 .navbar_logo{
     font-size: 20px;
     color: var(--text-color);
