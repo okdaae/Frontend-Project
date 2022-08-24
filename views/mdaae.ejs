@@ -19,7 +19,7 @@
   <body>
     <%-include("navbar_test.ejs")%>
    <div id="main">
-    <div class="section">
+    <div class="container">
     <!--오시는길-->
     <h3 class="title">
       <span class="title-bullet"></span>
@@ -87,59 +87,43 @@
   </div>
 
     <!--근처에 놀거리-->
-    <div class="play-contents">
-    <h3 class="title play">근처에 놀거리</h3>
-  </div>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3" >
-      <div class="images">
-        <a href="#" class="banner-img"><img src="/static/img/water.jpg" alt="water">
-        <p class="hover-text">열심히 저어라! 캠팡보트</p></a>
+    <div class="container">
+<h3 class="title">
+      <span class="title-bullet"></span>
+      즐길거리
+    </h3>
+    </div>
+<div class="section2_con">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" >
+        <div class="images">
+          <a href="#" class="banner-img"><img src="/static/img/water.jpg" alt="water">
+          <p class="hover-text">열심히 저어라! 캠팡보트</p></a>
+          </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" >
+        <div class="images">
+          <a href="#" class="banner-img"><img src="/static/img/high.jpg" alt="high">
+          <p class="hover-text">오싹오싹 스카이다이빙</p></a>
         </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3" >
-      <div class="images">
-        <a href="#" class="banner-img"><img src="/static/img/high.jpg" alt="high">
-        <p class="hover-text">오싹오싹 스카이다이빙</p></a>
       </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3" >
-      <div class="images">
-        <a href="#" class="banner-img"><img src="/static/img/stone.jpg" alt="high">
-        <p class="hover-text">캠팡의 명소! 돌탑쌓기</p></a>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" >
+        <div class="images">
+          <a href="#" class="banner-img"><img src="/static/img/stone.jpg" alt="high">
+          <p class="hover-text">캠팡의 명소! 돌탑쌓기</p></a>
+        </div>
       </div>
-    </div>
-    <div class="col-12 col-md-6 col-lg-4 col-xl-3" >
-      <div class="images">
-        <a href="#" class="banner-img"><img src="/static/img/information/camping-car.jpg" alt="high">
-        <p class="hover-text">함께해서 더 즐거운<br>차박여행</p></a>
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3" >
+        <div class="images">
+          <a href="#" class="banner-img"><img src="/static/img/information/camping-car.jpg" alt="high">
+          <p class="hover-text">함께해서 더 즐거운<br>차박여행</p></a>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-    <!-- <div class="img-group">
-  <div class="images">
-  <a href="#" class="banner-img"><img src="/static/img/water.jpg" alt="water">
-  <p class="hover-text">열심히 저어라! 캠팡보트</p></a>
-  </div>
-  <div class="images">
-    <a href="#" class="banner-img"><img src="/static/img/high.jpg" alt="high">
-    <p class="hover-text">오싹오싹 스카이다이빙</p></a>
-  </div>
-  <div class="images">
-    <a href="#" class="banner-img"><img src="/static/img/stone.jpg" alt="high">
-    <p class="hover-text">캠팡의 명소! 돌탑쌓기</p></a>
-  </div>
-  <div class="images">
-    <a href="#" class="banner-img"><img src="/static/img/information/camping-car.jpg" alt="high">
-    <p class="hover-text">함께해서 더 즐거운<br>차박여행</p></a>
-  </div>
-</div> -->
    </div>
-
+   <%-include("footer.ejs")%>
   </body>
 </html>

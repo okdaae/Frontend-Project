@@ -5,19 +5,19 @@
         box-sizing: border-box;
       }
       body{
-        font-family: 'Noto Sans KR', sans-serif; 
+        font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
         scroll-behavior: smooth;
       }
-      #main{
-       
+      a{
+        text-decoration: none;
       }
-      .section{
+      .container{
         width: 1200px;
-        margin: auto;
+        margin: 0 auto;
         margin-top: 100px;
       }
       .play-contents{
-        width: 1200px;
+        /* width: 1200px; 반응형 만들때 스크롤 생기게 하는 원인 */ 
         margin: 0 auto;
       }
       .title{
@@ -41,8 +41,7 @@
       .button-group:hover{
         background-color: azure;
       }
-      .button-group{
-      }
+
       .adress-title{
         font-size: 26px;
         line-height: 38px;
@@ -64,6 +63,9 @@
         border-color: transparent;
         background-color: #e5874a;
       }
+      .section2_con{
+        margin-bottom: 30px;
+      }
   /* .title-bullet{
     position: absolute;
       left: 0;
@@ -81,7 +83,7 @@
       right: 0;
       bottom: -10px;
       content: '';
-      width: 1200px;
+      width: inherit;
       height: 1px;
       background-color: #d1d1d1;
   }
@@ -109,7 +111,7 @@
   ul li{
     list-style: none;
   }
-  li{
+  .item-guide{
     float: left;
     margin-right: 9px;
   }
@@ -123,6 +125,9 @@
   .img-group{
     display: flex;
     padding-bottom: 40px;
+  }
+  .iframe-img{
+    width: 100%;
   }
   /*hover-img*/
   img{
@@ -217,8 +222,6 @@
       font-size: 16px;
     }
     .map{
-      width: 468px;
-      margin-left: 7px;
     }
     .iframe-img{
       width: 100%;
@@ -227,7 +230,7 @@
       display: inline-block;
     }
     .title-bullet::after{
-      width: 500px;
+      width: inherit;
     }
     .item-guide{
       min-width: 44px;
@@ -244,17 +247,24 @@
     .banner-img img{
       width: 429px;
     }
+    .title-aria{
+      padding: 0;
+    }
+    .list-info{
+      font-size: 13px;
+    }
   }
-    @media screen and (min-width:769px) and (max-width:920px) {
+    @media screen and (min-width:769px) and (max-width:967px) {
       .map{
-        width: 749px;
-        margin: 7px 7px;
       }
       .iframe-img{
         width: 100%;
       }
       .title-group{
         flex-direction: column;
+      }
+      .title-aria{
+        padding: 0;
       }
     }
       @media screen and (min-width:968px) and (max-width:1200px){
@@ -264,6 +274,9 @@
         }
         .iframe-img{
           width: 931px;
+        }
+        .title-group{
+          flex-direction: column;
         }
       }
     
