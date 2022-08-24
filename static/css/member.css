@@ -12,7 +12,7 @@
 }
 form > input{
     box-shadow: 1px 1px 2px;
-    height: 40px;
+    height: 60px;
     border-radius: 30px;
 }
 .introduce{
@@ -24,21 +24,38 @@ form > input{
 .col-12 form{
     border:2px solid #E5874A ;
     border-radius: 15px;
-    padding: 20px;
+    padding: 50px;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
 }
-.login > ul{
-    padding-left: 0;
+form > ul{
+    padding-left: 0px;
     padding: 10px 0 0 0;
 }
-.login > ul li{
+form > ul li{
     padding:0 0 12px 0;
     list-style: none;
     text-align: left;
 }
-.login > ul li input{
+form > ul li input{
     width: 100%;
     height: 46px;
     text-indent: 16px;
     border: 1px solid darkgray;
     border-radius: 6px;
+}
+form > ul li input::-webkit-input-placeholder{
+    /* font-size:16px;  */
+    color:darkgray;
+    text-indent: 16px;
+}
+.form-logo{
+    text-align: center;
+    padding-top: 0px;
+    font-size: 25px;
+}
+.w3-btn{
+    position: relative;
+    
 }
