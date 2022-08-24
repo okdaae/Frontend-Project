@@ -115,8 +115,8 @@
             }
             
             renderCalendar(arr_calendar);
+            console.log(arr_calendar);
         }
-
         function renderCalendar(data){
             let h = [];
             for(let i=0; i<data.length; i++){
@@ -127,14 +127,13 @@
                     h.push('</tr>');
                     h.push('<tr>');
                 }
-                h.push('<td onclick="setDate(' + data[i] + ');" style="cusrsor:pointer;">' + data[i] + '</td>');
+                h.push('<td class="td' + data[i] + '" onclick="setDate(' + data[i] + ');" style="cursor:pointer;">' + data[i] + '</td>');
             }
             
             h.push('</tr>');
 
             $("#tb_body").html(h.join(""));
         }
-
         // 실시간 예약 input1 input2에 집어넣기
         function setDate(day){
             if(day < 10) day = "0" + day;
@@ -142,11 +141,18 @@
             var valueById = $("#input_date").val();
             if(valueById == ''){
                 $("#input_date").val(current_year + "-" + current_month + "-" + day);
+                $(".td" + day).css({"background-color":"blue"});
+
             }
             else{
                 $("#output_date").val(current_year + "-" + current_month + "-" + day);
+                $(".td" + day).css({"background-color":"blue"});
+                // $(".td" + day-1).css({"background-color":"blue"});
+                // 중간 날짜도 색깔 칠해지게
+                // 초기화 누르면 색깔 부분도 다시 원상복구
             }
         }
+    
 
         function changeMonth(diff){
             if(diff == undefined){
