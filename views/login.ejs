@@ -138,6 +138,7 @@
             }
             
         </style>
+        <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
     </head>
     <body>
         <%-include("navbar_test.ejs")%>
@@ -168,6 +169,7 @@
         <%-include("footer.ejs")%>
 
     </body>
+
     <script>
     var naver_id_login = new naver_id_login("xfjjB882kqibOxF6Tm2p", "http://localhost:8000/login");
   	var state = naver_id_login.getUniqState();
@@ -176,5 +178,7 @@
   	naver_id_login.setState(state);
   	naver_id_login.setPopup();
   	naver_id_login.init_naver_id_login();
+
+  
     </script>
 </html>

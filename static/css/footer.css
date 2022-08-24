@@ -21,7 +21,9 @@ footer a:hover{
     text-align: center;
     padding: 50px;
 }
-
+.footer ul{
+    padding-left: 0;
+}
 .footer li{
     position: relative;
     display: inline;
