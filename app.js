@@ -49,6 +49,10 @@ app.get('/member', (req, res) => {
   res.render("member", {});
 });
 
+app.get('/reservation', (req,res) => {
+  res.render("reservation", {});
+})
+
 
 app.listen(port, ()=>{
     console.log("server open: ", port);
