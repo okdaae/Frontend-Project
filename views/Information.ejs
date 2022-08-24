@@ -24,9 +24,17 @@
       <%-include("navbar_test.ejs")%>
 
      <div id="wrap">  
+        <div class="jb-box">
+            <video  muted autoplay controls id="videoPlay">
+              <source type="video/mp4" src="/static/img/information/campaang01.mp4" onended="">
+            </video>
+            <video  muted autoplay controls id="video2">
+              <source type="video/mp4" src="/static/img/information/campaang02.mp4" onended="">
+            </video>
+          </div>
         <!-- detail-->
-       <div class="reserCon01">
-       </div>
+       <!-- <div class="reserCon01">
+       </div> -->
        <!-- p -->
       
 
@@ -345,7 +353,11 @@
 
                 }
             });
-            let scrolling = $('.navbar');
+            
+        
+        $('#videoPlay').on("ended" , function(){
+          $('#videoPlay').attr("src","/static/img/information/campaang02.mp4")
+        })    
 
         </script>
        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
