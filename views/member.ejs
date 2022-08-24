@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="/static/css/w3css.css">
         <link rel="stylesheet" href="/static/css/member.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <link rel="stylesheet" href="/static/css/w3css.css">
         <style>
            
 
@@ -20,32 +19,35 @@
         <hr>
         <div class="col-12">
             <div class="introduce">
-                <i>회원가입 홈페이지 입니다.
-                    <br>
-                    회원가입 하시고  많은 혜택을 받아보세요!
-                </i>
-                <p>&nbsp;</p>
-                <i style="font-size: 15px; color: black;">
-                    This is the membership website.
-                    <br>
-                    Sign up and get lots of benefits!
-                </i>
+                    <i>회원가입 홈페이지 입니다.
+                        <br>
+                        회원가입 하시고  많은 혜택을 받아보세요!
+                    </i>
+                    <p>&nbsp;</p>
+                    <i style="font-size: 15px; color: black;">
+                        This is the membership website.
+                        <br>
+                        Sign up and get lots of benefits!
+                    </i>
             </div>
-            <p>&nbsp;</p>
+                <p>&nbsp;</p>
             <form action="#">
                 <div class="form-logo"><i>JOIN</i></div>
                 <hr>
                 <ul>
                     <label for="first-name">성(first-name):</label><br>
-                    <li><input type="text" placeholder="ex) 홍" title="성 입력"></li>
+                    <li><input type="text" placeholder="ex) 홍" title="성 입력" oninput="first_name(this);" required></li>
+                    <div class="error01" style="color: red;"></div>
                     <br>
                     <br>
                     <label for="name">이름(name):</label><br>
-                    <li><input type="text" placeholder="ex) 길동" title="이름 입력"></li>
+                    <li><input type="text" placeholder="ex) 길동" title="이름 입력" oninput="second_name(this);" required></li>
+                    <div class="error02" style="color: red;"></div>
                     <br>
                     <br>
                     <label for="e-mail">이메일을 적으세요(email):</label><br>
-                    <li><input type="email" id="e-mail" placeholder="이메일을 적으세요" size="40" title="email"></li><br>
+                    <li><input type="email" id="e-mail" placeholder="이메일을 적으세요" size="40" title="email" oninput="email(this);" required></li>
+                    <div class="error03"></div>
                     <br>
                     <label for="choose_gender">성별(gender):</label>
                     <br>
@@ -59,14 +61,65 @@
                     <li><input type="date" name="brith" max="2022-12-31" min="1910-01-01"></li>
                     <br>
                     <label for="tel">연락처(tel) :</label>
-                    <li><input type="tel" name="tel" placeholder="010-9402-3853"></li>
+                    <li><input type="tel" name="tel" placeholder="010-9402-3853" title="전화번호" oninput="phone(this);" required></li>
+                    <div class="error04"></div>
                     <br>
                 </ul>
             </form>
         </div>
-       
+        <div class="submit-btn">
+            <button class="w3-button w3-blue-gray" id="submit">제출하기</button>
+        </div>
      </div>
-   <%-include("footer.ejs")%>          
+   <%-include("footer.ejs")%>   
+     <script>
+        document.getElementById('submit').addEventListener('click',function(){
+            alert("회원가입이 완료되었습니다.");
+        });
+
+       function first_name(obj){
+        let regFirst_name = /[ㄱ-ㅎ가-힣]/;
+        if(regFirst_name.test(obj.value) === false){
+            $(".error01").text(`한글로 작성해주세요`);
+        }
+        else{
+            $(".error01").text("");
+        }
+       };
+       function second_name(obj){
+        let regSecond_name = /[ㄱ-ㅎ가-힣]/;
+        if(regSecond_name.test(obj.value) === false){
+            $(".error02").text(`한글로 작성해주세요`);
+        }
+        else{
+            $(".error02").text("");
+        }
+       };
+       function email(obj){
+        let regemail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+        if(regemail.test(obj.value) === false){
+            $(".error03").text(`입력 형식에 맞게 이메일을 작성해주세요`);
+        }
+        else{
+            $(".error03").text("");
+        }
+       }
+       function phone(obj){
+        let regPhone =  /^\d{3}-\d{3,4}-\d{4}$/;
+        if(regPhone.test(obj.value) === false){
+            $(".error04").text(`입력 형식에 맞게 번호를 작성해주세요`);
+        }
+        else{
+            $(".error04").text("");
+        }
+       }
+
+
+     </script>  
+     <script
+  src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+  integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+  crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     </body>
 </html>
