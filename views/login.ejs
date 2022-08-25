@@ -8,6 +8,9 @@
         <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- 네이버계정 로그인 -->
+        <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
         <style>
             :root {
                 --text-color: floralwhite;
@@ -18,6 +21,7 @@
                 width: 410px;
                 /* margin: auto;
                 height: 100%; */
+                margin-top: 30px;
                 position: absolute;
                 top: 50%;
                 left: 50%;  
@@ -35,7 +39,7 @@
             }
 
             .login > ul{
-                /* padding-left: 0; */
+                padding-left: 0;
                 padding: 10px 0 0 0;
             }
             .login > ul li{
@@ -97,12 +101,13 @@
 
             
             .login div{
-                padding: 0 0 25px 0;
+                padding: 0 0 5px 0;
             }
             .login div ul{
                 display: flex;
                 justify-content: center;
                 list-style: none;
+                padding-left: 0;
             }
             .login div ul li{
                 position: relative;
@@ -141,6 +146,12 @@
                 display: flex;
                 justify-content: space-around;
             }
+
+            @media screen and (max-width:440px){
+                .login{
+                    width: 90%;
+                }
+            }
             
         </style>
         <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
@@ -161,7 +172,7 @@
                     <div class="login-btn">
                         <div id="naver_id_login"></div>
                         <div>
-                            <a href="javascript:kakaoLogin();"><img src="/static/img/information/kakao_login_small.png" alt="카카오계정 로그인" style="height: 40px;"/></a>
+                            <a href="javascript:kakaoLogin();"><img src="/static/img/naver, kakao/kakao_login_large_narrow.png" title="카카오 아이디로 로그인" alt="카카오계정 로그인" style="height: 40px;"/></a>
                         </div>
                     </div>                    
                 </ul>
