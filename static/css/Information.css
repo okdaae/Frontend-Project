@@ -73,6 +73,7 @@ th{
 }
 video{
     width: 100%;
+    object-fit: cover;
 }
 .sub_title p{
     color: #797878;
