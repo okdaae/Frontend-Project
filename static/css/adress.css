@@ -217,6 +217,21 @@
     opacity: 0;
   }*/
   /*------------------------------ 미디어쿼리*/
+  @media screen and (max-width:499px) {
+    .adress-title{
+      font-size: 19px;
+    }
+    .title-aria{
+      padding: 0;
+    }
+    .title-group{
+      display: flex;
+      flex-direction: column;
+    }
+    .item-guide{
+      min-width: 29px;
+    }
+  }
   @media screen and (min-width:500px) and (max-width:768px) {
     .title{
       font-size: 16px;

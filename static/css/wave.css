@@ -5,7 +5,8 @@
 }
 body {  
  margin:0; 
- font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
+ font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif;
+ scroll-behavior: smooth; 
 }  
 .main-title{
     font-family: 'Montserrat', sans-serif;
@@ -107,14 +108,17 @@ button{
     border: none;
     text-align: initial;
 }
-.button-text{
+.button-text, .weather{
     text-decoration: none;
     color: #fff;
+    
 }
 button a:hover{
     letter-spacing: 1rem;
 }
-
+.title-icon{
+    font-size: 23px;
+}
 /* .logo {  
  width:50px;  
  fill:white;  
@@ -144,15 +148,25 @@ button a:hover{
     color: #fff;
     overflow: hidden;
 }
-.section1_con{
-    width: 1200px;
-    padding-top: 100px;
+.container{
+    width: 100%;
+    /* padding-top: 100px; */
     position: relative;
-    margin: auto;
-    background-color: #003f2b;
+    /* background-color: #003f2b; */
+}
+.title-camppang-logo{
+    position: absolute;
+    top: 30px;
+    left: 0;
 }
 .section1-title{
     padding-bottom: 10px;
+}
+.section-title-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 .section-desc{
     color: #fff;
@@ -212,6 +226,45 @@ button a:hover{
         transform: translateX(5px);
 }
 }
+#contact{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    background: #003f2b;
+}
+.contact-con{
+    text-align: center;
+}
+#contact .contact-bg img{
+    display: block;
+    width: 100%;/*width:100%를 줘야 스크롤이 안생긴다!*/
+    position: absolute;
+    bottom: 400px;
+}
+#contact .contact-text{
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    margin-left: 50%;
+    left: -50px;
+    background: #ffffff;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+.contact-btn a{
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    margin-left: 50%;
+    left: -50px;
+    background: #ffffff;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
 /*---------------------------- footer */
 #footer{
     width: 100%;
@@ -243,7 +296,15 @@ button a:hover{
 .footer-detail{
     line-height: 150px;
 }
-
+@media screen and (max-width:499px) {
+    .main-contents{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-title{
+        animation: none;
+    }
+}
 @media screen and (min-width:500px) and (max-width:768px) {
     .main-contents{
         max-width: 700px;
