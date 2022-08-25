@@ -80,7 +80,7 @@ video{
     object-fit: contain;
     background-size: fill;
 }
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
     .jb-box{
         width: 100%;
         height: 150px;
@@ -96,6 +96,7 @@ video{
         width: 100%;
         object-fit: cover;
         background-size: fill;
+        height: 100%;
     }
 }
 .sub_title p{
@@ -124,25 +125,20 @@ p {
     margin-bottom: 0.5%;
     letter-spacing: 4px;
 }
-@media screen and (max-width:300px){
-
+@media screen and (max-width:538px){
     .sub_title{
         text-align: center;
         width: 100%;
         padding: 15px;
-        height: 300px;
+        height: 400px;
     }
     #sub_title3{
         text-align: center;
         width: 100%;
         padding: 15px;
         height: 400px;
+        min-height: 200px;
     }
-    
-
-        height: 400px;
-    }
-
 }
 
 /* 텐트 이용 */
