@@ -34,7 +34,7 @@
        <!-- p -->
       
 
-       <div class="sub_title">
+       <div class="sub_title" id="sub_title3">
           <h3>Rental Tent</h3>
           <span>캠핑장 텐트 이용 안내 입니다. </span>
           <p>Tent rental service.Please look around and take what you need!</p>
@@ -108,7 +108,7 @@
      
       
        <!-- 위에는 여백 밑에는 이용안내 -->
-       <div class="sub_title">
+       <div class="sub_title" id="sub_title2">
           <h3>Camping Guide</h3>
           <span>캠핑장 이용안내</span>
           <p>use our Camping Guide, probably it will be little bit help</p>
@@ -211,7 +211,7 @@
       
       <!-- 환불 정책 라인 -->
       
-      <div class="sub_title">
+      <div class="sub_title" id="sub_title1">
         <h3>Refund policy</h3>
         <span>환불정책</span>
         <p>Please read the refund policy and contact us if you have any questions</p>
@@ -317,9 +317,9 @@
     </div>
 
       <div class="camppang_btn">
-        <div class="tent-btn"><i class="fa-solid fa-tents"></i></div>
-        <div class="Guide-btn"><i class="fa-brands fa-glide-g"></i></div>
-        <div class="refund-btn"><i class="fa-solid fa-sack-dollar"></i></div>
+        <a class="tent-btn" href="#sub_title3"><i class="fa-solid fa-tents"></i></a>
+        <a class="Guide-btn" href="#sub_title2"><i class="fa-brands fa-glide-g"></i></a>
+        <a class="refund-btn" href="#sub_title1"><i class="fa-solid fa-sack-dollar"></i></a>
         <a href="#" class="top"><i class="fa-solid fa-arrow-up"></i></a>
       </div>
 
@@ -329,15 +329,15 @@
 
         <script>
         
-       $('.tent-btn').on('click',function(){
-          window.scrollTo({top: 350, behavior: "smooth"});
-       })
-       $('.Guide-btn').on('click',function(){
-        window.scrollTo({top:1305, behavior:"smooth"});
-       })
-       $('.refund-btn').on('click',function(){
-        window.scrollTo({top: 2375, behavior:"smooth"});
-       })
+      // $('.tent-btn').on('click',function(){
+        //  window.scrollTo({top: 350, behavior: "smooth"});
+       //})
+     //  $('.Guide-btn').on('click',function(){
+      //  window.scrollTo({top:1305, behavior:"smooth"});
+      // })
+      // $('.refund-btn').on('click',function(){
+      //  window.scrollTo({top: 2375, behavior:"smooth"});
+       //})
         
        window.addEventListener('scroll',function(){
                 if(scrollY <= 400 && scrollY >= 0){
