@@ -80,16 +80,16 @@ video{
     object-fit: contain;
     background-size: fill;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 900px){
     .jb-box{
         width: 100%;
-        height: 400px;
+        height: 300px;
         overflow: hidden;
         margin: 0px auto;
         position: relative;
         min-width: 100%;
         min-height: auto;
-        background-size: cover;
+        background-size: fill;
         padding-bottom: 0px;
     }
     video{
