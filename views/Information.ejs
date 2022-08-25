@@ -25,11 +25,7 @@
 
      <div id="wrap">  
         <div class="jb-box">
-            <video  muted autoplay controls id="videoPlay">
-              <source type="video/mp4" src="/static/img/information/campaang01.mp4" onended="">
-            </video>
-            <video  muted autoplay controls id="video2">
-              <source type="video/mp4" src="/static/img/information/campaang02.mp4" onended="">
+            <video type="video/mp4" src="/static/img/information/campaang01.mp4" muted autoplay="autoplay"  id="videoPlay" onended="">
             </video>
           </div>
         <!-- detail-->
@@ -356,7 +352,7 @@
             
         
         $('#videoPlay').on("ended" , function(){
-          $('#videoPlay').attr("src","/static/img/information/campaang02.mp4")
+          $('#videoPlay').attr("src","/static/img/information/countingstar.mp4")
         })    
 
         </script>
