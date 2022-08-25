@@ -45,7 +45,12 @@ app.get('/reservation', (req,res) => {
   res.render("reservation", {});
 })
 
+app.get('/weather', (req,res) => {
+  res.render("weather", {});
+})
+
 
 app.listen(port, ()=>{
     console.log("server open: ", port);
 });
+
