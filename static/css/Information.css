@@ -404,6 +404,7 @@ ul, li {
     box-shadow: 3px 3px 20px -8px black;
     /* color: var(--text-color); */
     cursor: pointer;
+    z-index: 20;
 }
 .camppang_btn i{
     color: var(--text-color);
@@ -469,4 +470,7 @@ ul, li {
 } 
 .navbar{
     background-color: transparent !important; 
+}
+footer{
+    z-index: 0;
 }
