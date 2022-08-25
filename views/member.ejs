@@ -32,7 +32,7 @@
             </div>
                 <p>&nbsp;</p>
             <form action="#">
-                <div class="form-logo"><i>JOIN</i></div>
+                <div class="form-logo"><i>SIGN UP!</i></div>
                 <hr>
                 <ul>
                     <label for="first-name">성(first-name):</label><br>
@@ -58,12 +58,13 @@
                     <p>&nbsp;</p>
                     <label for="birthday">생년월일(Birth):</label>
                     <br>
-                    <li><input type="date" name="brith" max="2022-12-31" min="1910-01-01"></li>
+                    <li><input type="date" name="brith" max="2022-12-31" min="1910-01-01" id="currentMonth"></li>
                     <br>
                     <label for="tel">연락처(tel) :</label>
                     <li><input type="tel" name="tel" placeholder="010-9402-3853" title="전화번호" oninput="phone(this);" required></li>
                     <div class="error04"></div>
                     <br>
+                    <input type="reset">
                 </ul>
             </form>
         </div>
@@ -73,8 +74,12 @@
      </div>
    <%-include("footer.ejs")%>   
      <script>
+
+
         document.getElementById('submit').addEventListener('click',function(){
             alert("회원가입이 완료되었습니다.");
+            window.location.href="login";
+            
         });
 
        function first_name(obj){
@@ -113,7 +118,7 @@
             $(".error04").text("");
         }
        }
-
+       document.getElementById("currentMonth").value = new Date().toISOString().slice(0,10);
 
      </script>  
      <script
