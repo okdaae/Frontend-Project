@@ -136,6 +136,10 @@
                 /* 혼자 있기 때문에 boder로 줘도 괜찮은데 */
                 /* 다른 것과 같이 있을 경우에는 after써서 position을 주는 게 나음 */
             }
+            .login-btn{
+                display: flex;
+                justify-content: space-around;
+            }
             
         </style>
         <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
@@ -153,7 +157,12 @@
                         <label for="chk_id">아이디저장</label>
                     </li>
                     <li><button>로그인</button></li>
-                    <div id="naver_id_login"></div>
+                    <div class="login-btn">
+                        <div id="naver_id_login"></div>
+                        <div>
+                            <a href="javascript:kakaoLogin();"><img src="/static/img/information/kakao_login_small.png" alt="카카오계정 로그인" style="height: 40px;"/></a>
+                        </div>
+                    </div>                    
                 </ul>
                 <div>
                     <ul>
@@ -163,6 +172,7 @@
                     </ul>
                 </div>
                 <a href="">비회원 주문조회</a>
+                
             </section>
         </div>
 
@@ -181,4 +191,43 @@
 
   
     </script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script>
+        Kakao.init('50a73088a22b4692f7b45f6925ef2d86'); //발급받은 키 중 javascript키를 사용해준다.
+        console.log(Kakao.isInitialized()); // sdk초기화여부판단
+        //카카오로그인
+        function kakaoLogin() {
+            Kakao.Auth.login({
+              success: function (response) {
+                Kakao.API.request({
+                  url: '/v2/user/me',
+                  success: function (response) {
+                      console.log(response)
+                  },
+                  fail: function (error) {
+                    console.log(error)
+                  },
+                })
+              },
+              fail: function (error) {
+                console.log(error)
+              },
+            })
+          }
+        //카카오로그아웃  
+        function kakaoLogout() {
+            if (Kakao.Auth.getAccessToken()) {
+              Kakao.API.request({
+                url: '/v1/user/unlink',
+                success: function (response) {
+                    console.log(response)
+                },
+                fail: function (error) {
+                  console.log(error)
+                },
+              })
+              Kakao.Auth.setAccessToken(undefined)
+            }
+          }  
+        </script>
 </html>
