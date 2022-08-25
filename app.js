@@ -8,10 +8,6 @@ const port = 8000;
 app.get("/", (req, res) => {
   res.render("mmdaae", {});
 });
-app.get("/one", (req, res) => {
-  res.render("one", {});
-});
-
 app.get('/tools',(req, res) => {
     res.render('tools',{})
 });
@@ -32,10 +28,6 @@ app.get('/mmdaae',(req, res) => {
   res.render('mmdaae',{});
 });
 
-
-app.get("/food", (req, res) => {
-    res.render("food", {});
-});
 app.get("/food_new", (req, res) => {
   res.render("food_new", {});
 });
