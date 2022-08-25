@@ -471,6 +471,9 @@ ul, li {
 .navbar{
     background-color: transparent !important; 
 }
+.navbar i{
+    color: var(--text-color);
+}
 footer{
     z-index: 0;
 }
