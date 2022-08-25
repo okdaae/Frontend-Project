@@ -173,9 +173,8 @@ button a:hover{
     text-align: initial;
 }
 .weather-content{
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
-    background-color: #F79B29;
 }
 /* wave - Animation */  
 .parallax > use {  
