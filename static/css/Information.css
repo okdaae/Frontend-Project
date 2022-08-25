@@ -125,6 +125,7 @@ p {
     letter-spacing: 4px;
 }
 @media screen and (max-width:300px){
+
     .sub_title{
         text-align: center;
         width: 100%;
@@ -138,6 +139,10 @@ p {
         height: 400px;
     }
     
+
+        height: 400px;
+    }
+
 }
 
 /* 텐트 이용 */
