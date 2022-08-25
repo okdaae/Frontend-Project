@@ -124,7 +124,7 @@ p {
     margin-bottom: 0.5%;
     letter-spacing: 4px;
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:300px){
     .sub_title{
         text-align: center;
         width: 100%;
