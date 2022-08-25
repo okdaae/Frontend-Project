@@ -124,6 +124,14 @@ p {
     margin-bottom: 0.5%;
     letter-spacing: 4px;
 }
+@media screen and (max-width:600px){
+    .sub_title{
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+        height: 400px;
+    }
+}
 
 /* 텐트 이용 */
 .tent{
@@ -170,6 +178,7 @@ p {
         align-items: center;
         justify-content: space-around;
         flex-direction: column;
+        margin-top: 50px;
     }
     .tent-img{
         width: 500px;
