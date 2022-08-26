@@ -31,6 +31,18 @@ form > input{
     justify-content: center;
     align-items: center;
 }
+@media screen and (max-width:400px){
+    .col-12 form{
+        border:2px solid #E5874A ;
+        border-radius: 15px;
+        padding: 50px;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+}
+
 form > ul{
     padding-left: 0px;
     padding: 10px 0 0 0;
@@ -63,4 +75,7 @@ form > ul li input::-webkit-input-placeholder{
     width: 200px;
     height: 50px;
     cursor: pointer;
+}
+.submit-btn{
+    height: 400px;
 }
