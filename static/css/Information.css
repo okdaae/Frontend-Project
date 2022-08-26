@@ -519,6 +519,7 @@ ul, li {
 @media screen and (max-width:430px){
     .tent-btn{
         bottom: 255px;
+        left: 335px;
     }
     .camppang_btn a{
         position:fixed;
@@ -537,14 +538,17 @@ ul, li {
     }
     .Guide-btn{
         bottom: 180px;
+        left: 335px;
     }
     .refund-btn{
         bottom: 105px;
+        left: 335px;
     }
     .top{
         bottom: 30px;
         text-decoration: none;
         background-color: white !important;
+        left: 335px;
     }
 }
 
