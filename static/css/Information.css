@@ -4,7 +4,9 @@
     --background-color: lightsteelblue;
     --accent-color: #E5874A;
 }
-
+body{
+    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
+}
 #wrap{
     position: relative;
     overflow: hidden;
@@ -136,7 +138,7 @@ p {
         text-align: center;
         width: 100%;
         padding: 15px;
-        height: 200px;
+        height: 250px;
     }
     #sub_title2{
         text-align: center;
@@ -148,7 +150,7 @@ p {
         text-align: center;
         width: 100%;
         padding: 15px;
-        height: 200px;
+        height: 300px;
     }
 }
 
@@ -186,9 +188,9 @@ p {
 }
 .tent-table-form td{
     padding: 15px;
-    font-family: 'Times New Roman', Times, serif;
+     font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
 }
-@media screen and (max-width:538px){
+@media screen and (max-width:540px){
     .tent{
         width: 100%;
         height: 900px;
@@ -208,11 +210,17 @@ p {
     }
     .tent-table{
         width: 100%;
-        height: 600px;
+        height: auto;
         text-align: center;
         vertical-align: middle;
         align-items: center;
         margin-top: 150px;
+        overflow: scroll;
+        padding: 10px;
+    }
+    .tent-table-form td{
+        padding: 2px;
+         font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
     }
 }
 .tent-img img{
@@ -285,16 +293,19 @@ p {
         height: 100%;
     }
     .Guide-text{
-        width: 70%;
+        width: 100%;
         height: 900px;
         text-align: left;
         font-size: 14px;
         overflow: hidden;
         text-overflow: ellipsis;
         margin-top: 50px;
+        align-items: center;
+        vertical-align: middle;
+        padding-left: 50px;
     }
     .guide-text1{
-        width: 400px;
+        width: 70%;
         display: flex;
         flex-direction: row;
         overflow: scroll;
@@ -308,6 +319,20 @@ p {
         width: 100%;
         height: auto;
         padding-right: 10px;
+    }
+}
+@media screen and (max-width:768px){
+      .Guide-text{
+        width: 100%;
+        height: 900px;
+        text-align: left;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 50px;
+        align-items: center;
+        vertical-align: middle;
+        padding-left: 50px;
     }
 }
 ul, li {
@@ -324,8 +349,9 @@ ul, li {
 }
 @media (max-width: 450px) {
     .using-img{
-        width: 625px;
+        width: 100%;
         height: 400px;
+        padding-left: 0px;
     }
 }
 
@@ -357,7 +383,7 @@ ul, li {
     text-overflow: ellipsis;
     padding-right: 50px;
 }
-@media screen and (max-width: 100px){
+@media screen and (max-width: 500px){
     .refund{
         display: flex;
         width: 100%;
@@ -380,6 +406,7 @@ ul, li {
         text-overflow: ellipsis;
        font-size: 15px;
        overflow-x: none;
+       margin-bottom: 200px;
     }
 }
 
@@ -484,6 +511,37 @@ ul, li {
     text-decoration: none;
     animation-name: bounce;
     animation-duration: 1s;
+}
+@media screen and (max-width:430px){
+    .tent-btn{
+        bottom: 255px;
+    }
+    .camppang_btn a{
+        position:fixed;
+        right: 40px;
+        width: 35px;
+        height: 35px;
+        /* text-align: center;
+        vertical-align: middle;
+        display: inline-block; */
+        border-radius: 100px;
+        background-color: var(--accent-color);
+        box-shadow: 3px 3px 20px -8px black;
+        /* color: var(--text-color); */
+        cursor: pointer;
+        z-index: 20;
+    }
+    .Guide-btn{
+        bottom: 180px;
+    }
+    .refund-btn{
+        bottom: 105px;
+    }
+    .top{
+        bottom: 30px;
+        text-decoration: none;
+        background-color: white !important;
+    }
 }
 
 @-webkit-keyframes bounce {

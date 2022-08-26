@@ -191,6 +191,10 @@
     align-items: center;
   }
   
+.navbar_toggleBtn{
+  top: 7px !important;
+}
+  
   /*------------------------------ top 버튼
   .top-button{
     display: inline-block;
@@ -218,6 +222,7 @@
   }*/
   /*------------------------------ 미디어쿼리*/
   @media screen and (max-width:499px) {
+    
     .adress-title{
       font-size: 19px;
     }

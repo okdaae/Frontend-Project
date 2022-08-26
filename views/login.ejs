@@ -27,6 +27,7 @@
                 left: 50%;  
                 transform: translate(-50%, -50%);
                 text-align: center;
+                font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
             }
             .login h2{
                 padding: 0 0 20px 0;
@@ -162,13 +163,13 @@
             <section class="login">
                 <h2>로그인</h2>
                 <ul>
-                    <li><input type="text" placeholder="아이디" title="아이디입력"></li>
-                    <li><input type="password" placeholder="비밀번호" title="비밀번호입력"></li>
+                    <li><input type="text" placeholder="아이디" title="아이디입력" id="user_id" name="user_ID"></li>
+                    <li><input type="password" placeholder="비밀번호" title="비밀번호입력" id="user_pwd" name="user_PWD"></li>
                     <li><input type="checkbox" id="chk_id">
                         <!-- before -->
                         <label for="chk_id">아이디저장</label>
                     </li>
-                    <li><button>로그인</button></li>
+                    <li><button id="login_btn" type="submit">로그인</button></li>
                     <div class="login-btn">
                         <div id="naver_id_login"></div>
                         <div>
@@ -201,7 +202,36 @@
   	naver_id_login.setPopup();
   	naver_id_login.init_naver_id_login();
 
-  
+    document.getElementById('login_btn').addEventListener('click',function(){
+       log_in_text();
+    })
+
+    function log_in_text(){
+      function right(){
+          var user_id =  /^[a-zA-Z0-9]*$/;
+          var user_pwd =  /^[a-zA-Z0-9]*$/;
+          if(!user_id.test($("input[name = 'user_ID']").val())){
+            alert("올바른 아이디형식이 아닙니다.");
+          }else if(!user_pwd.test($("input[name = 'user_PWD']").val())){
+            alert("비밀번호는 한글을 지원하지 않습니다.");
+          }else{
+            window.location.href="/mmdaae";
+            alert("로그인 되었습니다.");
+          }
+    }
+        
+      if($.trim($("#user_id").val())== '' && $.trim($("#user_pwd").val())==''){
+        alert("아이디를 입력해주세요");
+        alert("비밀번호를 입력해주세요");
+      }else if($.trim($("#user_id").val())==''){
+        alert("아이디를 입력해주세요");
+      }
+      else if($.trim($("#user_pwd").val())==''){
+        alert("비밀번호를 입력해주세요");
+      }else{
+        right();
+      }
+    };
     </script>
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script>

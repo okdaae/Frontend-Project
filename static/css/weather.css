@@ -19,7 +19,7 @@ input.search-bar {
   border-radius: 24px;
   background: #7c7c7c2b;
   color: white;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
   font-size: 105%;
   /* 버튼을위한공간남기기 */
   width: calc(100% - 50px);
@@ -39,9 +39,9 @@ input.search-bar {
   transition: 0.2s ease-in-out;
 } */
 
-button:hover {
+/* button:hover {
   background: #7c7c7c6b;
-}
+} */
 
 h1.temp {
   margin: 0;
