@@ -150,7 +150,7 @@ p {
         text-align: center;
         width: 100%;
         padding: 15px;
-        height: 200px;
+        height: 300px;
     }
 }
 
@@ -188,9 +188,9 @@ p {
 }
 .tent-table-form td{
     padding: 15px;
-    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
+     font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
 }
-@media screen and (max-width:538px){
+@media screen and (max-width:540px){
     .tent{
         width: 100%;
         height: 900px;
@@ -215,6 +215,7 @@ p {
         vertical-align: middle;
         align-items: center;
         margin-top: 150px;
+        overflow: scroll;
     }
 }
 .tent-img img{
@@ -287,16 +288,19 @@ p {
         height: 100%;
     }
     .Guide-text{
-        width: 70%;
+        width: 100%;
         height: 900px;
         text-align: left;
         font-size: 14px;
         overflow: hidden;
         text-overflow: ellipsis;
         margin-top: 50px;
+        align-items: center;
+        vertical-align: middle;
+        padding-left: 50px;
     }
     .guide-text1{
-        width: 400px;
+        width: 70%;
         display: flex;
         flex-direction: row;
         overflow: scroll;
@@ -310,6 +314,20 @@ p {
         width: 100%;
         height: auto;
         padding-right: 10px;
+    }
+}
+@media screen and (max-width:768px){
+      .Guide-text{
+        width: 100%;
+        height: 900px;
+        text-align: left;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 50px;
+        align-items: center;
+        vertical-align: middle;
+        padding-left: 50px;
     }
 }
 ul, li {
@@ -383,6 +401,7 @@ ul, li {
         text-overflow: ellipsis;
        font-size: 15px;
        overflow-x: none;
+       margin-bottom: 200px;
     }
 }
 
@@ -487,6 +506,26 @@ ul, li {
     text-decoration: none;
     animation-name: bounce;
     animation-duration: 1s;
+}
+@media screen and (max-width:430px){
+    .tent-btn{
+        bottom: 255px;
+        left: 320px;
+    }
+    .Guide-btn{
+        bottom: 180px;
+        left: 320px;
+    }
+    .refund-btn{
+        bottom: 105px;
+        left: 320px;
+    }
+    .top{
+        bottom: 30px;
+        text-decoration: none;
+        background-color: white !important;
+        left: 320px;
+    }
 }
 
 @-webkit-keyframes bounce {
