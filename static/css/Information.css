@@ -510,21 +510,17 @@ ul, li {
 @media screen and (max-width:430px){
     .tent-btn{
         bottom: 255px;
-        left: 320px;
     }
     .Guide-btn{
         bottom: 180px;
-        left: 320px;
     }
     .refund-btn{
         bottom: 105px;
-        left: 320px;
     }
     .top{
         bottom: 30px;
         text-decoration: none;
         background-color: white !important;
-        left: 320px;
     }
 }
 
