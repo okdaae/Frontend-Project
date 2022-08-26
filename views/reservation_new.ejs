@@ -162,7 +162,7 @@
         .hidden{
             height: 0px;
             overflow-y: hidden;
-            transition: 2s;
+            transition: 1s;
         }
     </style>
 </head>
@@ -289,7 +289,7 @@
                                 <span>01</span>
                                 <span>개인정보 수집이용 동의</span>
                                 <!-- 개인정보 수집이용 동의 -->
-                                <a href="#agree_cont1" class="btn_open">보기</a>
+                                <a class="btn_open">보기</a>
                                 <div id="agree_cont1" class="agree_cont hidden">
                                     <p>메이크티켓의 서비스 이용과 관련하여 본인은 동의 내용을 숙지하였으며, 이에 따라 귀사(스마틱스 주식회사)가 본인의 개인정보를 아래와 같이 수집하는 것에 대해 동의합니다.
                                     </p>
@@ -316,7 +316,7 @@
                                 <span>02</span>
                                 <span>만 14세 이상에 동의</span>
                                 <!-- 만 14세 이상에 동의 -->
-                                <a href="#agree_cont2" class="btn_open">보기</a>
+                                <a class="btn_open">보기</a>
                                 <div id="agree_cont2" class="agree_cont hidden">
                                     만 14세 이상 동의 전문 (필수동의) 본 서비스는 전자상거래 결제 특성상 만 14세 이상만 이용 가능합니다. 만 14세 이상임을 확인합니다.
                                 </div>
@@ -333,7 +333,7 @@
                             <span class="note mg">선택동의</span>
                             <!-- 선택동의 -->
                         </h5>
-                        <a href="#agree_cont3" class="btn_open mg">보기</a>
+                        <a class="btn_open mg">보기</a>
                         <!-- 보기 -->
                         <div id="agree_cont3" class="agree-cont list_style nobd hidden">
                             <p>
@@ -355,7 +355,7 @@
                             <span class="note mg">필수동의</span>
                             <!-- 필수동의 -->
                         </h5>
-                        <a href="#agree_cont4" class="btn_open mg">보기</a>
+                        <a class="btn_open mg">보기</a>
                         <!-- 보기 -->
                         <div id-="agree_cont4" class="list_style nobd hidden">
                             <p>
@@ -580,12 +580,13 @@
         // 기능
 
         $(".btn_open").click(function(){
-            console.log("aaaaaa",$(".hidden").css("height"));
-            if($(".hidden").css("height")=="0px"){
-            $(".hidden").css({"height":"500px"});
+            var hidden = $(this).next();
+            console.log($(hidden).height())
+            if($(hidden).css("height")=="0px"){
+                $(hidden).css({"height": hidden[0].clientHeight+"px"});
             }
             else{
-            $(".hidden").css({"height":"0px"});
+                $(hidden).css({"height":"0px"});
             }
         })
 
