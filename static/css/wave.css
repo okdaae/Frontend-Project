@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 body {  
- margin:0; 
  font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif;
  scroll-behavior: smooth; 
 }  
@@ -113,9 +112,7 @@ button{
     color: #fff;
     
 }
-button a:hover{
-    letter-spacing: 1rem;
-}
+
 .title-icon{
     font-size: 23px;
 }
@@ -148,6 +145,9 @@ button a:hover{
     color: #fff;
     overflow: hidden;
 }
+#section1 .container{
+    padding: 0;
+}
 .container{
     width: 100%;
     /* padding-top: 100px; */
@@ -156,7 +156,7 @@ button a:hover{
 }
 .title-camppang-logo{
     position: absolute;
-    top: 30px;
+    top: -61px;
     left: 0;
 }
 .section1-title{
@@ -164,7 +164,7 @@ button a:hover{
 }
 .section-title-group{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }

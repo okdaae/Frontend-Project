@@ -39,9 +39,9 @@ input.search-bar {
   transition: 0.2s ease-in-out;
 } */
 
-button:hover {
+/* button:hover {
   background: #7c7c7c6b;
-}
+} */
 
 h1.temp {
   margin: 0;
