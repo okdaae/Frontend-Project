@@ -507,6 +507,27 @@ ul, li {
     animation-name: bounce;
     animation-duration: 1s;
 }
+@media screen and (max-width:430px){
+    .tent-btn{
+        bottom: 255px;
+        left: 320px;
+    }
+    .Guide-btn{
+        bottom: 180px;
+        left: 320px;
+    }
+    .refund-btn{
+        bottom: 105px;
+        left: 320px;
+        left: 320px;
+    }
+    .top{
+        bottom: 30px;
+        text-decoration: none;
+        background-color: white !important;
+        left: 320px;
+    }
+}
 
 @-webkit-keyframes bounce {
     0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
