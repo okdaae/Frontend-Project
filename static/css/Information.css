@@ -136,7 +136,7 @@ p {
         text-align: center;
         width: 100%;
         padding: 15px;
-        height: 200px;
+        height: 250px;
     }
     #sub_title2{
         text-align: center;
@@ -324,8 +324,9 @@ ul, li {
 }
 @media (max-width: 450px) {
     .using-img{
-        width: 625px;
+        width: 100%;
         height: 400px;
+        padding-left: 0px;
     }
 }
 
