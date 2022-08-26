@@ -4,7 +4,9 @@
     --background-color: lightsteelblue;
     --accent-color: #E5874A;
 }
-
+body{
+    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
+}
 #wrap{
     position: relative;
     overflow: hidden;
@@ -186,7 +188,7 @@ p {
 }
 .tent-table-form td{
     padding: 15px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
 }
 @media screen and (max-width:538px){
     .tent{
