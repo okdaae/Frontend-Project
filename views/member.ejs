@@ -39,15 +39,21 @@
                     <li><input type="text" placeholder="ex) 홍" title="성 입력" oninput="first_name(this);" required></li>
                     <div class="error01" style="color: red;"></div>
                     <br>
-                    <br>
                     <label for="name">이름(name):</label><br>
                     <li><input type="text" placeholder="ex) 길동" title="이름 입력" oninput="second_name(this);" required></li>
                     <div class="error02" style="color: red;"></div>
                     <br>
+                    <label for="user_ID">아이디(ID):</label>
+                    <li><input type="text" placeholder="ex) KDT2nd" title="아이디"  oninput="user_ID(this);" required></li>
+                    <div class="error5" style="color: red;"></div>
+                    <br>
+                    <label for="user_PWD">비밀번호(password):</label>
+                    <li><input type="password"placeholder="비밀번호" title="비밀번호입력" oninput="user_PWD(this);" required></li>
+                    <div class="error06" style="color: red;"></div>
                     <br>
                     <label for="e-mail">이메일을 적으세요(email):</label><br>
                     <li><input type="email" id="e-mail" placeholder="이메일을 적으세요" size="40" title="email" oninput="email(this);" required></li>
-                    <div class="error03"></div>
+                    <div class="error03" style="color: red;"></div>
                     <br>
                     <label for="choose_gender">성별(gender):</label>
                     <br>
@@ -62,7 +68,7 @@
                     <br>
                     <label for="tel">연락처(tel) :</label>
                     <li><input type="tel" name="tel" placeholder="010-9402-3853" title="전화번호" oninput="phone(this);" required></li>
-                    <div class="error04"></div>
+                    <div class="error04" style="color: red;"></div>
                     <br>
                     <input type="reset">
                 </ul>
@@ -77,9 +83,7 @@
 
 
         document.getElementById('submit').addEventListener('click',function(){
-            alert("회원가입이 완료되었습니다.");
-            window.location.href="login";
-            
+            login_sunit()
         });
 
        function first_name(obj){
@@ -100,12 +104,31 @@
             $(".error02").text("");
         }
        };
+       
+       function user_ID(obj){
+        let reguser_id =/^[a-zA-Z0-9]*$/;
+        if(reguser_id.test(obj.value) === false){
+            $(".error5").text(`한글아이디는 안됩니다!`);
+        }
+        else{
+            $(".error5").text("");
+        }
+       };
+       function user_PWD(obj){
+        let reguser_pwd =/^[a-zA-Z0-9`~!@#$%^&*|]*$/;
+        if(reguser_pwd.test(obj.value) === true){
+            $(".error06").text(`특수문자를 포함해서 만들어주세요!`);
+        }
+        else if(reguser_pwd.test(obj.value) === null){
+            $(".error06").text("");
+        }
+       };
        function email(obj){
         let regemail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
         if(regemail.test(obj.value) === false){
             $(".error03").text(`입력 형식에 맞게 이메일을 작성해주세요`);
         }
-        else{
+        else {
             $(".error03").text("");
         }
        }
@@ -119,7 +142,16 @@
         }
        }
        document.getElementById("currentMonth").value = new Date().toISOString().slice(0,10);
-
+    
+       function login_sunit(){
+            let inputValue = $("input").val();
+            if(inputValue == '' || inputValue == null){
+                alert("공백란을 채워주세요")
+            }else{
+                alert("회원가입이 완료되었습니다.");
+                window.location.href="/login";
+            }
+    }
      </script>  
      <script
   src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
