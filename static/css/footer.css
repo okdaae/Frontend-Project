@@ -8,6 +8,7 @@ footer{
     background-color: var(--background-color);
     position: relative;
     /* transform: translateY(-100%); */
+    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
 }
 
 footer a{

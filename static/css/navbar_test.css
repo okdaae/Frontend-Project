@@ -2,10 +2,11 @@
     --text-color: floralwhite;
     --background-color: lightsteelblue;
     --accent-color: #E5874A;
+    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
 }
 body{
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
 }
 
 .navbar a{
@@ -31,6 +32,7 @@ body{
     z-index: 1;
     animation-name: navbar;
     animation-duration: 2s;
+    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
 }
 
 @keyframes navbar{

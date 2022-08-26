@@ -27,6 +27,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
+    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
   }
   *,
   *::before,
