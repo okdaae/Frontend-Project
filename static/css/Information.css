@@ -210,12 +210,17 @@ p {
     }
     .tent-table{
         width: 100%;
-        height: 600px;
+        height: auto;
         text-align: center;
         vertical-align: middle;
         align-items: center;
         margin-top: 150px;
         overflow: scroll;
+        padding: 10px;
+    }
+    .tent-table-form td{
+        padding: 2px;
+         font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
     }
 }
 .tent-img img{
