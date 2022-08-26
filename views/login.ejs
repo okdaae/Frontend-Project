@@ -208,15 +208,16 @@
 
     function log_in_text(){
       function right(){
-      var user_id =  /^[a-zA-Z0-9]*$/;
-      var user_pwd =  /^[a-zA-Z0-9]*$/;
-      if(!user_id.test($("input[name = 'user_ID']").val())){
-        alert("올바른 아이디형식이 아닙니다.");
-      }else if(!user_pwd.test($("input[name = 'user_PWD']").val())){
-        alert("비밀번호는 한글을 지원하지 않습니다.");
-      }else{
-        window.location.href="/mmdaae";
-      }
+          var user_id =  /^[a-zA-Z0-9]*$/;
+          var user_pwd =  /^[a-zA-Z0-9]*$/;
+          if(!user_id.test($("input[name = 'user_ID']").val())){
+            alert("올바른 아이디형식이 아닙니다.");
+          }else if(!user_pwd.test($("input[name = 'user_PWD']").val())){
+            alert("비밀번호는 한글을 지원하지 않습니다.");
+          }else{
+            window.location.href="/mmdaae";
+            alert("로그인 되었습니다.");
+          }
     }
         
       if($.trim($("#user_id").val())== '' && $.trim($("#user_pwd").val())==''){
