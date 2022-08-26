@@ -45,8 +45,8 @@ app.get('/reservation', (req,res) => {
   res.render("reservation", {});
 })
 
-app.get('/weather', (req,res) => {
-  res.render("weather", {});
+app.get('/reservation_new', (req,res) => {
+  res.render("reservation_new", {});
 })
 
 

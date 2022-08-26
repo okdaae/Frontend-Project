@@ -10,106 +10,151 @@
     <!-- Fontawesome -->
     <script src="https://kit.fontawesome.com/acfe1c41fb.js" crossorigin="anonymous"></script>
     <style>
+
+        :root {
+            --accent-color:  #E5874A;
+            }
+
         body{
             font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
         }
         .highlight{
             background-color:lightskyblue;
         }
+
         #reservation{
-            margin-top: 150px;
+            margin-top: 130px;
             margin-bottom: 100px;
         }
+        .calendar{
+            width: 80%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .calendar input{
+            text-align: center;
+            border-style: none;
+            width: 60px;
+            font-weight: 500;
+            font-size: 25px;
+        }
+        .calendar select{
+            text-align: center;
+            appearance: none;
+            border-style: none;
+            font-weight: 500;
+            font-size: 25px;
+        }
+        .calendar i{
+            position: relative;
+            bottom: 1.8px;
+            margin: 4px;
+            color: var(--accent-color);
+        }
+        .table{
+            margin: 20px 0 20px 0;
+        }
+        thead td{
+            color: gray;
+        }
+
     </style>
 </head>
 <body>
     <%-include("navbar_test.ejs")%>
+    <div id="wrapper">
+        <div class="container">
+            <div id="reservation">
+                <h4 class="reservation_title">실시간 예약</h4>
+                <div class="calendar">
+                    <div>
+                        <i class="fa fa-chevron-left" onclick="changeMonth(-1);"></i>
+                        <input type="text" id="year" value="2020">
+                        <!-- 위에 부분 class가 부트스트랩에서 사용되고 있는 class인데 디자인을 바꿀 거면 class를 바꿔야 함 -->
+                        <select id="month" onchange="changeMonth();">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <i class="fa fa-chevron-right" onclick="changeMonth(+1);"></i>
+                    </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <td>Sun</td>
+                                <td>Mon</td>
+                                <td>Tue</td>
+                                <td>Wed</td>
+                                <td>thu</td>
+                                <td>Fri</td>
+                                <td>Sat</td>
+                            </tr>
+                        </thead>
+                        <tbody id="tb_body"></tbody>
+                    </table>
+                </div> 
+            
 
-    <div id="reservation"r class="container">
-        <div style="width:300px;">
-            <div>
-                <button type="button" onclick="changeMonth(-1);"><i class="fa fa-chevron-left"></i></button>
-                <input type="number" id="year" value="2020" style="width:80px; display:initial;" class="form-control">
-                <!-- 위에 부분 class가 부트스트랩에서 사용되고 있는 class인데 디자인을 바꿀 거면 class를 바꿔야 함 -->
-                <select id="month" class="form-control" style="width:80px; display:initial;" onchange="changeMonth();">
-                    <option value="1">1월</option>
-                    <option value="2">2월</option>
-                    <option value="3">3월</option>
-                    <option value="4">4월</option>
-                    <option value="5">5월</option>
-                    <option value="6">6월</option>
-                    <option value="7">7월</option>
-                    <option value="8">8월</option>
-                    <option value="9">9월</option>
-                    <option value="10">10월</option>
-                    <option value="11">11월</option>
-                    <option value="12">12월</option>
-                </select>
-                <button type="button" onclick="changeMonth(+1);"><i class="fa fa-chevron-right"></i></button>
-            </div>
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>일</th>
-                        <th>월</th>
-                        <th>화</th>
-                        <th>수</th>
-                        <th>목</th>
-                        <th>금</th>
-                        <th>토</th>
-                    </tr>
-                </thead>
-                <tbody id="tb_body"></tbody>
-            </table>
-        </div> 
-    
-
-        <div>
-            <form>
                 <div>
-                    <span>예약정보입력</span>
-                </div>
-                <div>
-                    <!-- 예약자 정보 -->
-                    <ul class="myInfo">
-                        <li>
-                            <label for="r_date">입실날짜</label>
-                            <input type="text" id="input_date" placeholder="날짜는 달력에서 선택하세요.">
-                        </li>
-                        <li>
-                            <label for="r_date">퇴실날짜</label>
-                            <input type="text" id="output_date" placeholder="날짜는 달력에서 선택하세요.">
-                        </li>
-                        <button type="button" onclick="rst();">초기화</button>
-                        <li>
-                            <label for="r_name">예약자명</label>
-                            <input type="text" id="name" name="name" placeholder="예약자명과 입금자명은 동일해야 합니다.">
-                        </li>
-                        <li>
-                            <label for="r_phone">연락처</label>
-                            <input type="text" id="phone" name="phone" placeholder="010-0000-0000">
-                        </li>
-                        <li>
-                            <label for="r_transport">방문수단</label>
-                            <input type="radio" id="car" name="visitway">차량
-                            <input type="radio" id="walk" name="visitway">도보
-                            <input type="text" placeholder="띄어쓰기 없이 7~8자리 모두 입력해주세요.">
-                            <ul class="msg">
-                                <li>* 주차할 차량 번호 7~8자리 모두 입력하세요.</li>
-                                <li>* 정확하게 입력하셔야 차단기가 열립니다.</li>
-                                <li>* 차량 한 대만 주차가 가능합니다.</li>
+                    <form>
+                        <div>
+                            <span>예약정보입력</span>
+                        </div>
+                        <div>
+                            <!-- 예약자 정보 -->
+                            <ul class="myInfo">
+                                <li>
+                                    <label for="r_date">입실날짜</label>
+                                    <input type="text" id="input_date" placeholder="날짜는 달력에서 선택하세요.">
+                                </li>
+                                <li>
+                                    <label for="r_date">퇴실날짜</label>
+                                    <input type="text" id="output_date" placeholder="날짜는 달력에서 선택하세요.">
+                                </li>
+                                <button type="button" onclick="rst();">초기화</button>
+                                <li>
+                                    <h6>예약자명</h6>
+                                    <input type="text" id="name" name="name" placeholder="예약자명과 입금자명은 동일해야 합니다.">
+                                </li>
+                                <li>
+                                    <h6>연락처</h6>
+                                    <input type="text" id="phone" name="phone" placeholder="010-0000-0000">
+                                </li>
+                                <li>
+                                    <h6>방문수단</h6>
+                                    <input type="radio" id="car" name="visitway">차량
+                                    <input type="radio" id="walk" name="visitway">도보
+                                    <input type="text" placeholder="띄어쓰기 없이 7~8자리 모두 입력해주세요.">
+                                    <ul class="msg">
+                                        <li>* 주차할 차량 번호 7~8자리 모두 입력하세요.</li>
+                                        <li>* 정확하게 입력하셔야 차단기가 열립니다.</li>
+                                        <li>* 차량 한 대만 주차가 가능합니다.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h6>방문인원수</h6>
+                                    <input type="number" id="rcnt" name="rcnt" value="1" max="6" min="1">
+                                    <em>명</em>
+                                </li>
                             </ul>
-                        </li>
-                        <li>
-                            <label for="r_cnt">방문인원수</label>
-                            <input type="number" id="rcnt" name="rcnt" value="1" max="6" min="1">
-                            <em>명</em>
-                        </li>
-                    </ul>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
+
+    <%-include("footer.ejs")%>
 
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -200,7 +245,7 @@
             }
             else if(input_date_value == ''){
                 $("#input_date").val(current_year + "-" + current_month + "-" + day);
-                $(".td" + day).css({"background-color":"blue"});
+                $(".td" + day).css({"background-color":"rgba(229, 135, 74, 0.7)"});
                 // var inputdate = ".td"+String(Number(day));
                 // var inputdate = (Number(day));
                 // console.log(day, inputdate);
@@ -208,7 +253,7 @@
             else if(input_date_value != ''){
                 $("#output_date").val(current_year + "-" + current_month + "-" + day);
                 var output_date = ".td" + day
-                $(".td" + day).css({"background-color":"blue"});
+                $(".td" + day).css({"background-color":"rgba(229, 135, 74, 0.7)"});
                 // $("#" + inputdate ~ "#" + outputdate).css({"background-color":"blue"});
                 // var outputdate = ".td"+String(Number(day));
                 var outputday = (Number(day));
@@ -218,8 +263,8 @@
                 var inputday = input_date_value.split('-')[2];
                 // console.log(inputday);
                 // console.log(outputday);
-                for( let i=inputday; i<outputday; i++){
-                    $(".td"+i).css({"background-color":"blue"});
+                for( let i=Number(inputday)+1; i<outputday; i++){
+                    $(".td"+i).css({"background-color":"rgba(229, 135, 74, 0.5)"});
                 }
 
                 // $(".td" + String(Nusmber(day)-1)).css({"background-color":"blue"});
@@ -269,19 +314,9 @@
 
         changeYearMonth(current_year,current_month);
 
-
-        //
-        // if input.value != '' {
-        //     두번째 INPUT
-        // }
-
-        // if($(#input_value").val())
-
         
 
     </script>
-
-    <%-include("footer.ejs")%>
 
 </body>
 </html>
