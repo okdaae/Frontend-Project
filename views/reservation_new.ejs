@@ -21,15 +21,30 @@
         ol, ul{
             list-style: none;
         }
+        .container{
+            font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif;
+        }
         #reservation{
-            margin-top: 130px;
+            margin-top: 150px;
             margin-bottom: 100px;
+        }
+        .reservation_title{
+            margin-top: 100px;
+            margin-bottom: 30px;
+            color:var(--accent-color);
+            font-weight: 600;
+        }
+        #reservation .row{
+            margin-top: 50px;
         }
         #reservation .box{
             position: relative;
             margin-bottom: 10px;
             padding: 0px 25px;
             border: 1px solid var(--box-color);
+        }
+        #reservation .box>div{
+            margin: 15px 0px;
         }
         /* #reservation .left{
             float: left;
@@ -41,7 +56,7 @@
             width: 445px;
         } */
         .calendar{
-            width: 95%;
+            width: 100%;
             text-align: center;
             margin-left: auto;
             margin-right: auto;
@@ -50,8 +65,9 @@
         .calendar input{
             text-align: center;
             border-style: none;
-            width: 60px;
+            width: 65px;
             font-weight: 500;
+            padding: 0px;
             font-size: 25px;
         }
         .calendar select{
@@ -132,6 +148,15 @@
             margin: 15px 0px;
             padding: 0px 12px;
         }
+        .msg{
+            font-size: 12px;
+            padding: 12px 0px;
+            border-top: 1px solid var(--box-color);
+            border-bottom: 1px solid var(--box-color);
+        }
+        .msg li{
+            padding: 0 12px;
+        }
         #reservation .list1{
             border-top: 1px solid var(--box-color);
             border-bottom: 1px solid var(--box-color);
@@ -148,7 +173,7 @@
         }
         #reservation .btn_open{
             float: right;
-            color: #d71343;
+            color: var(--accent-color);
             font-size: 12px;
             position: relative;
             right: 1px;
@@ -157,6 +182,93 @@
             position: absolute;
             top: 19px;
             right: 25px;
+        }
+        /* #reservation #tent_type{
+            position: absolute;
+            top: 15px;
+            right: 25px; 
+        } */
+        #reservation .price{
+            float: right;
+            color: var(--accent-color);
+        }
+
+        /* #reservation3 .person li input{
+            position: absolute;
+            top: 30px;
+            right: 10px;
+        } */
+        /* .person li input{
+            float: left;
+            width: 200px;
+            height: 38px;
+            padding: 0 24px;
+        } */
+        /* .person label{
+            width: 100px;
+        }
+        .person input{
+            width: 60%;
+        } */
+        .person>div{
+            padding-bottom: 4px;
+        }
+
+        .person>li,
+        .person>div>li,
+        #reservation1 li{
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0px;
+            line-height: 40px;
+        }
+        #reservation2{
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0px;
+        }
+        #reservation2 #tent_type{
+            height: 42px;
+            position: relative;
+            top: 7px;
+            color:#666666;
+            padding: 0px 9px;
+        }
+        .person>li input,
+        .person>div>li input,
+        #reservation1 li input,
+        #tent_type{
+            width: 65%;
+        }
+        .person>li input[type='number']{
+            width: 55px;
+        }
+        input,
+        #tent_type{
+            padding: 0 12px;
+            border: 1px solid var(--box-color);
+            border-radius: 4px;
+        }
+
+        /* 초기화 버튼 */
+        .rst{
+            /* border-bottom: 1px solid var(--accent-color); */
+            background-color: white;
+            color: var(--accent-color);
+            text-align: right;
+            display: block;
+            /* font-weight: 600; */
+            padding-top: 3px;
+            font-size: 14px;
+        }
+        .rst:hover{
+            color:var(--accent-color);
+        }
+        /* 예약하기 */
+        .paybtn{
+            width: 100%;
+            background-color:var(--accent-color);
+            text-align: center;
         }
         
         /* 기능 */
@@ -175,105 +287,110 @@
 
     <div id="wrapper">
         <div class="container" id="reservation">
-            <h4>실시간 예약</h4>
+            <h4 class="reservation_title">실시간 예약</h4>
             <hr>
             <div class="row">
                 <div class="left col-12 col-lg-6">
                     <div class="box" id="reservation1">
                         <h5>예약날짜 선택</h5>
-                        <div class="calendar">
-                            <div>
-                                <i class="fa fa-chevron-left" onclick="changeMonth(-1);"></i>
-                                <input type="text" id="year" value="2020">
-                                <!-- 위에 부분 class가 부트스트랩에서 사용되고 있는 class인데 디자인을 바꿀 거면 class를 바꿔야 함 -->
-                                <select id="month" onchange="changeMonth();">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                                <i class="fa fa-chevron-right" onclick="changeMonth(+1);"></i>
+                        <div>
+                            <div class="calendar">
+                                <div>
+                                    <i class="fa fa-chevron-left" onclick="changeMonth(-1);"></i>
+                                    <input type="text" id="year" value="2020">
+                                    <!-- 위에 부분 class가 부트스트랩에서 사용되고 있는 class인데 디자인을 바꿀 거면 class를 바꿔야 함 -->
+                                    <select id="month" onchange="changeMonth();">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <i class="fa fa-chevron-right" onclick="changeMonth(+1);"></i>
+                                </div>
+                                <table class="table table-bordered" style="table-layout: fixed;">
+                                    <thead>
+                                        <tr>
+                                            <td>Sun</td>
+                                            <td>Mon</td>
+                                            <td>Tue</td>
+                                            <td>Wed</td>
+                                            <td>thu</td>
+                                            <td>Fri</td>
+                                            <td>Sat</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tb_body"></tbody>
+                                </table>
                             </div>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <td>Sun</td>
-                                        <td>Mon</td>
-                                        <td>Tue</td>
-                                        <td>Wed</td>
-                                        <td>thu</td>
-                                        <td>Fri</td>
-                                        <td>Sat</td>
-                                    </tr>
-                                </thead>
-                                <tbody id="tb_body"></tbody>
-                            </table>
+                            <ul>
+                                <li>
+                                    <label for="r_date">입실날짜</label>
+                                    <input type="text" id="input_date" placeholder="날짜는 달력에서 선택하세요.">
+                                </li>
+                                <li>
+                                    <label for="r_date">퇴실날짜</label>
+                                    <input type="text" id="output_date" placeholder="날짜는 달력에서 선택하세요.">
+                                </li>
+                                <a class="rst" onclick="rst();">초기화</a>
+                            </ul>
                         </div>
-                        <ul>
-                            <li>
-                                <label for="r_date">입실날짜</label>
-                                <input type="text" id="input_date" placeholder="날짜는 달력에서 선택하세요.">
-                            </li>
-                            <li>
-                                <label for="r_date">퇴실날짜</label>
-                                <input type="text" id="output_date" placeholder="날짜는 달력에서 선택하세요.">
-                            </li>
-                            <button type="button" onclick="rst();">초기화</button>
-                        </ul>
                     </div>
 
                     <div class="box" id="reservation2">
-                        <h5>텐트 선택</h5>
+                        <h5 style="border-bottom:none"b>텐트 선택</h5>
                         <select id="tent_type">
-                            <option value="1">tent1</option>
-                            <option value="2">tent2</option>
-                            <option value="3">tent3</option>
-                            <option value="4">tent4</option>
+                            <option value="1">텐트 선택</option>
+                            <option value="1">225*225*210</option>
+                            <option value="2">300*300*210</option>
+                            <option value="3">455*415*210</option>
+                            <option value="4">600*612*412</option>
+                            <option value="5">1051*1568*1654</option>
                         </select>
+                    </div>
+                    <div class="box" id="reservation3"#666666>
+                        <h5>예약자 정보</h5>
+                        <div>
+                            <ul class="person">
+                                <li>
+                                    <label>예약자명</label>
+                                    <input type="text" id="name" name="name" placeholder="예약자명과 입금자명은 동일해야 합니다.">
+                                </li>
+                                <li>
+                                    <label>연락처</label>
+                                    <input type="text" id="phone" name="phone" placeholder="010-0000-0000">
+                                </li>
+                                <li>
+                                    <label>이메일(선택)</label>
+                                    <input type="text" id="email" name="email">
+                                </li>
+                                <div>
+                                    <li>
+                                        <label>차량번호</label>
+                                        <input type="text" placeholder="띄어쓰기 없이 7~8자리 모두 입력해주세요.">
+                                    </li>
+                                    <ul class="msg">
+                                        <li>- 주차할 차량 번호 7~8자리 모두 입력하세요.</li>
+                                        <li>- 정확하게 입력하셔야 차단기가 열립니다.</li>
+                                        <li>- 차량 한 대만 주차가 가능합니다.</li>
+                                    </ul>
+                                </div>
+                                <li>
+                                    <label>방문인원수</label>
+                                    <input type="number" id="rcnt" name="rcnt" value="1" max="6" min="1">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="right col-12 col-lg-6">
-                    <div class="box" id="reservation3">
-                        <h5>예약자 정보</h5>
-                        <ul class="person">
-                            <li>
-                                <h6>예약자명</h6>
-                                <input type="text" id="name" name="name" placeholder="예약자명과 입금자명은 동일해야 합니다.">
-                            </li>
-                            <li>
-                                <h6>연락처</h6>
-                                <input type="text" id="phone" name="phone" placeholder="010-0000-0000">
-                            </li>
-                            <li>
-                                <h6>이메일(선택)</h6>
-                                <input type="text" id="email" name="email">
-                            </li>
-                            <li>
-                                <h6>방문수단</h6>
-                                <input type="radio" id="car" name="visitway">차량
-                                <input type="radio" id="walk" name="visitway">도보
-                                <input type="text" placeholder="띄어쓰기 없이 7~8자리 모두 입력해주세요.">
-                                <ul class="msg">
-                                    <li>* 주차할 차량 번호 7~8자리 모두 입력하세요.</li>
-                                    <li>* 정확하게 입력하셔야 차단기가 열립니다.</li>
-                                    <li>* 차량 한 대만 주차가 가능합니다.</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <h6>방문인원수</h6>
-                                <input type="number" id="rcnt" name="rcnt" value="1" max="6" min="1">
-                                <em>명</em>
-                            </li>
-                        </ul>
-                    </div>
                     <div class="box" id="reservation4">
                         <h5>
                             <input type="checkbox" name="agreeAll" id="agreeAll">
@@ -404,14 +521,14 @@
                             <li>
                                 - 결제 완료 후 모바일티켓이 휴대폰으로 전송됩니다.
                                 <br>
-                                (e-mail 주소를 입력하신 분만 예약 내역 메일을 받아 볼 수 있습니다.)
+                                &nbsp; (e-mail 주소를 입력하신 분만 예약 내역 메일을 받아 볼 수 있습니다.)
                             </li>
                             <li>
                                 - 거래 영수증 확인 및 예약 취소는 예약내역 페이지에서 확인 가능합니다.
                             </li>
                         </ul>
                         <div class="box">
-                            <h5 class="bs">
+                            <h5 class="bs" style="border-bottom:none">
                                 <span>결제 예정금액</span>
                                 <!-- 결제 예정금액 -->
                                 <strong class="price" id="div_total_amount">0원</strong>
@@ -419,11 +536,11 @@
                             </h5>
                         </div>
                     </div>
+                    <div class="paybtn" id="paybtn_layer">
+                        예약하기
+                        <!-- 결제하기/예약하기 -->
+                    </div>
                 </div>
-            </div>
-            <div class="btn_area" id="paybtn_layer">
-                <a href="#" class="paybtn">예약하기</a>
-                <!-- 결제하기/예약하기 -->
             </div>
         </div>
         <!-- end contents -->
