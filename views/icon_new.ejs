@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/static/css/icon_new.css">
+<ul class="floating_item">
+    <li>
+        <a class="basic_item" onclick="call();">
+            <i class="fa-solid fa-phone"></i>
+            <span class="text hidden">전화</span>
+        </a>
+    </li>
+    <li>
+        <a href="/reservation_new" class="basic_item">
+            <i class="fa-solid fa-calendar" style="font-weight:400"></i>
+            <span class="text hidden">예약</span>
+        </a>
+    </li>
+    <li>
+        <a href="/mdaae" class="basic_item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="text hidden">오시는길</span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="top_item">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </li>
+</ul>
+
+<!-- sweetalert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+
+<script>
+    $(".basic_item").hover(function(){
+        $(".text").classList.remove("hidden");
+    })
+
+    function call(){
+    Swal.fire({
+        title: '010-9402-3853',
+        text: '전화연결은 위 번호로 가능합니다',
+        imageUrl: 'static/img/CAMPPANG.png',
+        imageAlt: 'CAMPPANG image',
+        confirmButtonColor: 'var(--accent-color)'
+    })
+    }
+</script>

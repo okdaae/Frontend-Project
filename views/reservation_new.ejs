@@ -779,6 +779,7 @@
                 title: '무통장입금 계좌 <br> 47478101-04-441526(국민)',
                 text: "예약 후 24시간 이내에 입금해야 하며 입금이 확인되지 않을 경우 예약 취소됩니다.",
                 imageUrl: 'static/img/CAMPPANG.png',
+                imageAlt: 'CAMPPANG image',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
@@ -799,10 +800,16 @@
                     icon: 'success',
                     iconColor: 'var(--background-color)',
                     confirmButtonColor: 'var(--accent-color)',                
+                    }).then(function(){
+                        window.location.href="/mmdaae";
                     })
                 }
                 })
         }
+        // document.getElementById
+        // $("#confirmButton").click(function(){
+        //     window.location.href="/mmdaae";
+        // })
             // Swal.fire({
             //     title: '무통장입금 계좌 <br> 47478101-04-441526(국민)',
             //     text: '예약 후 24시간 이내에 입금해야 하며 입금이 확인되지 않을 경우 예약 취소됩니다.',
