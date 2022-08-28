@@ -272,10 +272,10 @@ p {
     width: 70%;
     height: 1200px;
     text-align: left;
-    font-size: 14px;
-    overflow: hidden;
+    font-size: 20px;
+    overflow: scroll;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
 
 .guide-text1{
@@ -298,8 +298,8 @@ p {
         width: 100%;
         height: 900px;
         text-align: left;
-        font-size: 14px;
-        overflow: hidden;
+        font-size: 20px;
+        overflow: scroll;
         text-overflow: ellipsis;
         margin-top: 50px;
         align-items: center;
@@ -307,7 +307,7 @@ p {
         padding-left: 50px;
     }
     .guide-text1{
-        width: 70%;
+        width: 75%;
         display: flex;
         flex-direction: row;
         overflow: scroll;
