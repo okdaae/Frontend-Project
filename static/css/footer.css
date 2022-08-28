@@ -3,6 +3,9 @@
     min-height: 100%;
     /* padding-bottom: 200px; */
 }
+.footer a{
+    text-decoration: none;
+}
 footer{
     /* height:200px; */
     background-color: var(--background-color);
