@@ -33,6 +33,7 @@ body{
     animation-name: navbar;
     animation-duration: 2s;
     font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
+    font-size: 20px;
 }
 
 @keyframes navbar{
