@@ -6,6 +6,7 @@
     <title>wave-main</title>
     <link rel="stylesheet" href="/static/css/wave.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/static/css/icon_new.css">
 </head>
 <body>
      <!--Hey! This is the original version  
@@ -68,7 +69,7 @@
     <g class="parallax">  
     <use xlink:href="#gentle-wave" x="48" y="0" fill="#686D4E" />  
     <use xlink:href="#gentle-wave" x="48" y="3" fill="#40251E" />  
-    <use xlink:href="#gentle-wave" x="48" y="5" fill= #F79B29 " />  
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="#F79B29" />  
     <use xlink:href="#gentle-wave" x="48" y="7" fill="#f15a24" />  
     </g>  
     </svg>  
@@ -83,7 +84,11 @@
             <!-- <img src="/static/img/wave/small-CAMPPANG-logo.png" alt="" class="title-camppang-logo"> -->
             <!--here in video -->
             <div class="video-wrap">
+
                 <video type="video/mp4" src="/static/img/information/movie/Camp01.mp4" muted autoplay="autoplay"  id="VideoPlay" onended="" width="900px">
+
+                <video type="video/mp4" src="/static/img/information/movie/Camp02.mp4" muted autoplay="autoplay"  id="VideoPlay" onended="" width="900px">
+
                 </video>
             </div>
             <div class="section-title-group">
@@ -150,9 +155,18 @@
             </div> -->
         </div>
     </footer>
+    <ul class="floating_item">
+        <li>
+            <a href="#" class="top_item">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </li>
+    </ul>
+    
     <!-- <div class="tri">
         <img src="/static/img/wave/triangle-top.png" alt="">
     </div> -->
+
     <!--Content ends-->  
     <script>
         const toggleBtn = document.querySelector('.navbar_toggleBtn');
@@ -176,5 +190,18 @@
     </script>  
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--Content ends-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script>
+        $('#VideoPlay').on("ended" , function(){
+            $('#VideoPlay').attr("src","/static/img/information/movie/Camp01.mp4");
+            console.log()
+          })    
+  
+    </script>
+
 </body>
 </html>
