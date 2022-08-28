@@ -40,35 +40,16 @@
             </a>
         </nav>
 
-        <script>
-            const toggleBtn = document.querySelector('.navbar_toggleBtn');
-            console.log(toggleBtn);
-            const menu = document.querySelector('.navbar_menu');
-            const icons = document.querySelector('.navbar_icons');
-            toggleBtn.addEventListener('click', function(){
-                menu.classList.toggle('active');
-                icons.classList.toggle('active');
-            });
-
-            // window.addEventListener('scroll',function(){
-            //     if(scrollY <= 350){
-            //         $('.navbar').css('background','transparent');
-            //     }
-            //     else{
-            //         $('.navbar').css('background-color','var(--background-color)');
-            //     }
-            // })
-
-        </script>  
+     
  <div id="main">  
     <!--Content before waves-->  
     <div class="container">   
     <div class="main-contents">
         <div class="main-left">
-            <h1 class="main-title">HELLO CAMPPANG</h1>
-            <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi adipisci non qui et consectetur, officiis dolorem libero excepturi. Impedit sunt repudiandae, earum tempora nemo iusto quo placeat quis culpa?</p>
+            <h1 class="main-title">열심히 일하고<br>캠팡간다</h1>
+            <p class="main-text">열심히 일한 당신! 오늘만큼은 쉬어라.</p>
         <div class="btn-group">
-            <button class="button"><a href="#section1" class="button-text">enter the camppang</a></button>
+            <button class="button"><a href="#section1" class="button-text">들어가기</a></button>
         </div>
         </div>
         <div class="main-right">
@@ -103,16 +84,20 @@
             <!-- <img src="/static/img/wave/small-CAMPPANG-logo.png" alt="" class="title-camppang-logo"> -->
             <!--here in video -->
             <div class="video-wrap">
+
+                <video type="video/mp4" src="/static/img/information/movie/Camp01.mp4" muted autoplay="autoplay"  id="VideoPlay" onended="" width="900px">
+
                 <video type="video/mp4" src="/static/img/information/movie/Camp02.mp4" muted autoplay="autoplay"  id="VideoPlay" onended="" width="900px">
+
                 </video>
             </div>
             <div class="section-title-group">
-             <h1 class="section1-title">Let's go camppang</h1>
+             <h1 class="section1-title">우리,캠팡가자</h1>
 
             </div>
 <div id="weather-toggle">
     <div class="weather-content">
-        <h1 class="section1-title2">How's the weather today?</h1>
+        <h1 class="section1-title2">잠깐!<br>오늘, 날씨 어때?</h1>
         <!--여기 weather 넣을 예정-->
         
 <link rel="stylesheet" href="/static/css/weather.css">
@@ -181,6 +166,31 @@
     <!-- <div class="tri">
         <img src="/static/img/wave/triangle-top.png" alt="">
     </div> -->
+
+    <!--Content ends-->  
+    <script>
+        const toggleBtn = document.querySelector('.navbar_toggleBtn');
+        console.log(toggleBtn);
+        const menu = document.querySelector('.navbar_menu');
+        const icons = document.querySelector('.navbar_icons');
+        toggleBtn.addEventListener('click', function(){
+            menu.classList.toggle('active');
+            icons.classList.toggle('active');
+        });
+    
+        // window.addEventListener('scroll',function(){
+        //     if(scrollY <= 350){
+        //         $('.navbar').css('background','transparent');
+        //     }
+        //     else{
+        //         $('.navbar').css('background-color','var(--background-color)');
+        //     }
+        // })
+
+    </script>  
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
     <!--Content ends-->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.29/dist/sweetalert2.all.min.js"></script>
@@ -192,5 +202,6 @@
           })    
   
     </script>
+
 </body>
 </html>

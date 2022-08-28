@@ -5,8 +5,11 @@
 }
 body {  
  font-family:'Noto Sans KR', sans-serif;
- scroll-behavior: smooth; 
+    scroll-behavior: smooth; 
 }  
+html{
+    scroll-behavior: smooth;
+}
 .main-title{
     font-family: 'Noto Sans KR', sans-serif; 
     font-size: 77px;
@@ -20,7 +23,6 @@ body {
 }  
 p {  
  letter-spacing: 1px;  
- font-size:14px;  
  font-family: 'Noto Sans KR', sans-serif; 
 }  
 .header {  
@@ -140,7 +142,7 @@ button{
 }  
 #section1{
     width: 100%;
-    height: 1700px;
+    height: 1750px;
     background: #f15a24;
     color: #fff;
     overflow: hidden;
@@ -160,14 +162,14 @@ button{
     left: 0;
 }
 .section1-title{
-    margin-left: 662px;
+    margin-left: 732px;
     padding-bottom: 10px;
-    font-size: 149px;
+    font-size: 120px;
     z-index: 1;
 }
 .section-title-group{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
@@ -177,7 +179,7 @@ button{
 }
 .weather-content{
     /* height: 500px; */
-    padding-top: 300px;
+    padding-top: 320px;
     width: 100%;
     /* position: absolute;
     top: 858px;
@@ -317,14 +319,42 @@ button{
 }
 .footer-detail{
    color: #fff;
+   line-height: 95px;
 }
 @media screen and (max-width:499px) {
     .main-contents{
         display: flex;
         flex-direction: column;
     }
+    .video-wrap{
+        left: 6px;
+        background-color: transparent;
+    }
+    .video-wrap video{
+        width: 100%;
+    }
     .main-title{
         animation: none;
+    }
+    .main-contents{
+        max-width: 900px;
+    }
+    .video-wrap{
+        background-color: transparent;
+    }
+    .section1-title{
+        padding-bottom: 58px;
+        font-size: 38px;
+        margin-left: 257px;
+    }
+    .weather-content{
+        padding-top: 460px;
+    }
+    .section1-title2{
+        font-size: 20px;
+    }
+    .main-title{
+        font-size: 30px;
     }
 }
 @media screen and (min-width:500px) and (max-width:768px) {
@@ -335,15 +365,65 @@ button{
         width: 150px;
         height: 150px;
     }
+    .main-contents{
+        max-width: 900px;
+    }
+    .video-wrap{
+        background-color: transparent;
+    }
+    .section1-title{
+        padding-bottom: 58px;
+        font-size: 38px;
+        margin-left: 257px;
+    }
+    .weather-content{
+        padding-top: 460px;
+    }
+    .section1-title2{
+        font-size: 41px;
+    }
+    .main-title{
+        font-size: 30px;
+    }
   }
     @media screen and (min-width:769px) and (max-width:967px) {
         .main-contents{
             max-width: 900px;
         }
+        .video-wrap{
+            background-color: transparent;
+        }
+        .section1-title{
+            padding-bottom: 58px;
+            font-size: 50px;
+            margin-left: 578px;
+        }
+        .weather-content{
+            padding-top: 460px;
+        }
+        .section1-title2{
+            font-size: 41px;
+        }
+        .main-title{
+            font-size: 30px;
+        }
     }
       @media screen and (min-width:968px) and (max-width:1200px){
         .main-contents{
             max-width: 1000px;
+        }
+        .video-wrap{
+            width: 25%;
+        }
+        .section1-title{
+            font-size: 71px;
+            margin-left: 561px;
+        }
+        .section1-title2{
+            font-size: 60px;
+        }
+        .weather-content{
+            margin-top: 165px;
         }
       }
     
