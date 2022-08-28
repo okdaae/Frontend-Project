@@ -47,7 +47,7 @@
                     <li><input type="text" placeholder="ex) KDT2nd" title="아이디"  oninput="user_ID(this);" required></li>
                     <div class="error5" style="color: red;"></div>
                     <br>
-                    <label for="user_PWD">비밀번호(password):</label>
+                    <label for="user_PWD">비밀번호(password): 특수문자를 포함해주세요</label>
                     <li><input type="password"placeholder="비밀번호" title="비밀번호입력" oninput="user_PWD(this);" required></li>
                     <div class="error06" style="color: red;"></div>
                     <br>
@@ -115,8 +115,8 @@
         }
        };
        function user_PWD(obj){
-        let reguser_pwd =/^[a-zA-Z0-9`~!@#$%^&*|]*$/;
-        if(reguser_pwd.test(obj.value) === true){
+        let reguser_pwd = /^[a-zA-Z0-9 ~-*]*$/
+        if(reguser_pwd.test(obj.value) === false){
             $(".error06").text(`특수문자를 포함해서 만들어주세요!`);
         }
         else if(reguser_pwd.test(obj.value) === null){
@@ -146,7 +146,8 @@
        function login_sunit(){
             let inputValue = $("input").val();
             if(inputValue == '' || inputValue == null){
-                alert("공백란을 채워주세요")
+                alert("공백란을 채워주세요");
+
             }else{
                 alert("회원가입이 완료되었습니다.");
                 window.location.href="/login";
