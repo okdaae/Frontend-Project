@@ -2,11 +2,11 @@
     --text-color: floralwhite;
     --background-color: lightsteelblue;
     --accent-color: #E5874A;
-    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
+    font-family: 'Noto Sans KR', sans-serif; 
 }
 body{
     margin: 0;
-    font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
+    font-family:  'Noto Sans KR', sans-serif; 
 }
 
 .navbar a{
