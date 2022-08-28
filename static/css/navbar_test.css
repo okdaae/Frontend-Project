@@ -159,7 +159,7 @@ body{
     border-radius: 30px;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-color: chocolate;
+    background-color: var(--accent-color);
     cursor: pointer;
 }
 ::-webkit-scrollbar-track{

@@ -89,4 +89,7 @@ a{
         font-size: 22px;
         line-height: 50px;
     }
+    .floating_item .text{
+        line-height: 50px;
+    }
 }
