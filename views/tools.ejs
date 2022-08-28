@@ -245,7 +245,6 @@
             $(".tools_item_list>span").click(function(){
                 console.log($(this).data("target"));
                 $(".highlight").removeClass("highlight");
-                // 난 왜 이런 생각이 안 들까....
                 $(".tools_item_ex li > div[data-source="+$(this).data("target")+"]").addClass("highlight");
             });
 

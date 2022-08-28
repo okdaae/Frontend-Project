@@ -106,7 +106,6 @@
             left: -300%;
             /* display: none; */
         }
-        
         #reservation h5 input[type='checkbox'] + label:before{
             content: "";
             display: inline-block;
@@ -122,6 +121,7 @@
             background: var(--accent-color) url(/static/img/white-check-mark-icon.png) no-repeat center/ 15px auto;
             border-color: var(--accent-color);
         }
+
         #reservation h5 span.note{
             float: right;
             color: #7b7b7b;
@@ -310,7 +310,7 @@
             <div class="row">
                 <div class="left col-12 col-lg-6">
                     <div class="box" id="reservation1">
-                        <h5>예약날짜 선택</h5>
+                        <h5>예약날짜</h5>
                         <div>
                             <div class="calendar">
                                 <div>
@@ -363,7 +363,7 @@
                     </div>
 
                     <div class="box" id="reservation2">
-                        <h5 style="border-bottom:none"b>텐트 선택</h5>
+                        <h5 style="border-bottom:none"b>텐트</h5>
                         <select id="tent_type">
                             <option value="1">텐트 선택</option>
                             <option value="1">225*225*210 (2인용)</option>
@@ -530,14 +530,14 @@
                         </div>
                     </div>
                     <div class="box">
-                        <h5>결제 시 유의사항</h5>
+                        <h5>예약 시 유의사항</h5>
                         <!-- 결제 시 유의사항 -->
                         <ul class="list_style nobd">
                             <li>
-                                - 결제 시, 사용 업체는 (주)캠팡으로 표시됩니다.
+                                - 예약 시 24시간 이내에 478101-04-441526(국민) 계좌로 입금하셔야 예약 확정됩니다. 
                             </li>
                             <li>
-                                - 결제 완료 후 모바일티켓이 휴대폰으로 전송됩니다.
+                                - 예약 완료 후 24시간 이내에 입금 시 예약 확정 문자가 휴대폰으로 전송됩니다.
                                 <br>
                                 &nbsp; (e-mail 주소를 입력하신 분만 예약 내역 메일을 받아 볼 수 있습니다.)
                             </li>
@@ -645,51 +645,6 @@
 
             $("#tb_body").html(h.join(""));
         }
-        // 실시간 예약 input1 input2에 집어넣기
-        function setDate(day){
-            // if(day < 10) day = "0" + day;
-
-            var input_date_value = $("#input_date").val();
-            var output_date_value = $("#output_date").val();
-            if(output_date_value != ''){
-                // $(".td" + day).css({"background-color":"white"});
-                // 순서가 문제였다~
-            }
-            else if(input_date_value == ''){
-                $("#input_date").val(current_year + "-" + current_month + "-" + day);
-                $(".td" + day).css({"background-color":"rgba(229, 135, 74, 0.7)"});
-                // var inputdate = ".td"+String(Number(day));
-                // var inputdate = (Number(day));
-                // console.log(day, inputdate);
-            }
-            else if(input_date_value != ''){
-                $("#output_date").val(current_year + "-" + current_month + "-" + day);
-                var output_date = ".td" + day
-                $(".td" + day).css({"background-color":"rgba(229, 135, 74, 0.7)"});
-                // $("#" + inputdate ~ "#" + outputdate).css({"background-color":"blue"});
-                // var outputdate = ".td"+String(Number(day));
-                var outputday = (Number(day));
-                // console.log(day, outputdate);
-
-                // console.log(input_date_value.split('-')[2]);
-                var inputday = input_date_value.split('-')[2];
-                // console.log(inputday);
-                // console.log(outputday);
-                for( let i=Number(inputday)+1; i<outputday; i++){
-                    $(".td"+i).css({"background-color":"rgba(229, 135, 74, 0.5)"});
-                }
-
-                // $(".td" + String(Nusmber(day)-1)).css({"background-color":"blue"});
-                // 초기화 누르면 색깔 부분도 다시 원상복구
-            }
-        }
-
-        function rst(){
-            $("td").css({"background-color":"white"});
-            $("#input_date").val("");
-            $("#output_date").val("");
-        }
-    
 
         function changeMonth(diff){
             if(diff == undefined){
@@ -726,6 +681,40 @@
 
         changeYearMonth(current_year,current_month);
 
+
+
+        // 실시간 예약
+        function setDate(day){
+            // if(day < 10) day = "0" + day;
+
+            var input_date_value = $("#input_date").val();
+            var output_date_value = $("#output_date").val();
+            if(output_date_value != ''){
+            }
+            else if(input_date_value == ''){
+                $("#input_date").val(current_year + "-" + current_month + "-" + day);
+                $(".td" + day).css({"background-color":"rgba(229, 135, 74, 0.7)"});
+            }
+            else if(input_date_value != ''){
+                $("#output_date").val(current_year + "-" + current_month + "-" + day);
+                $(".td" + day).css({"background-color":"rgba(229, 135, 74, 0.7)"});
+                
+                var outputday = (Number(day));
+                var inputday = input_date_value.split('-')[2];
+                for( let i=Number(inputday)+1; i<outputday; i++){
+                    $(".td"+i).css({"background-color":"rgba(229, 135, 74, 0.5)"});
+                }
+            }
+        }
+
+        // 초기화
+        function rst(){
+            $("td").css({"background-color":"white"});
+            $("#input_date").val("");
+            $("#output_date").val("");
+        }
+    
+
         
         // 기능
 
@@ -743,8 +732,6 @@
         // navbar기능
         $(".btn_open").click(function(){
             var hidden = $(this).next();
-            console.log($(hidden).children().innerHeight());
-            console.log($(hidden).children().outerHeight(true));
             if($(hidden).css("height")=="0px"){
                 $(hidden).css({"height": hidden.children().outerHeight(true)});
             }
@@ -764,12 +751,11 @@
         // })
 
         $("#agreeAll").click(function(){
-            console.log($("#agreeAll").prop("checked"))
-            if(!$("#agreeAll").prop('checked')){
-                $("input[type=checkbox]").prop("checked", false);
+            if($("#agreeAll").prop('checked')){
+                $("input[type=checkbox]").prop("checked", true);
             }
             else {
-                $("input[type=checkbox]").prop("checked", true);
+                $("input[type=checkbox]").prop("checked", false);
             }
         })
 
