@@ -64,7 +64,7 @@
     <div class="container">   
     <div class="main-contents">
         <div class="main-left">
-            <h1 class="main-title">For All By You</h1>
+            <h1 class="main-title">HELLO CAMPPANG</h1>
             <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id commodi adipisci non qui et consectetur, officiis dolorem libero excepturi. Impedit sunt repudiandae, earum tempora nemo iusto quo placeat quis culpa?</p>
         <div class="btn-group">
             <button class="button"><a href="#section1" class="button-text">enter the camppang</a></button>
@@ -85,9 +85,9 @@
     <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />  
     </defs>  
     <g class="parallax">  
-    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(0,101,209,0.5" />  
-    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,101,116,1)" />  
-    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(0,101,209,0.8)" />  
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="#686D4E" />  
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="#40251E" />  
+    <use xlink:href="#gentle-wave" x="48" y="5" fill= #F79B29 " />  
     <use xlink:href="#gentle-wave" x="48" y="7" fill="#f15a24" />  
     </g>  
     </svg>  
@@ -100,44 +100,50 @@
         <div class="container">
         <div class="section-con">
             <!-- <img src="/static/img/wave/small-CAMPPANG-logo.png" alt="" class="title-camppang-logo"> -->
+            <!--here in video -->
+            <div class="video-wrap">
+                <video type="video/mp4" src="/static/img/information/camp.mp4" muted autoplay="autoplay"  id="videoPlay" onended="" width="900px">
+                </video>
+            </div>
             <div class="section-title-group">
-             <h1 class="section1-title">How's the weather today ?</h1>
-             <a href="https://weather.naver.com/today/09440109" class="weather">
-                 <span class="title-icon"><i class="fa-solid fa-circle-plus"></i></span>
-             </a>
+             <h1 class="section1-title">Let's go camppang</h1>
+
             </div>
-            <div class="weather-content">
-                <!--여기 weather 넣을 예정-->
-                
-  <link rel="stylesheet" href="/static/css/weather.css">
-  <script src="/static/js/weather.js" defer></script>
+<div id="weather-toggle">
+    <div class="weather-content">
+        <h1 class="section1-title2">How's the weather today?</h1>
+        <!--여기 weather 넣을 예정-->
+        
+<link rel="stylesheet" href="/static/css/weather.css">
+<script src="/static/js/weather.js" defer></script>
 
 
-  <div class="container">
-        <div class="card">
-          <div class="search">
-            <input type="text" class="search-bar" placeholder="Search"autocomplete="off" >
-            <button><span><i class="fa-solid fa-magnifying-glass-location"></i></span>
-            </button>
-          </div>
-          <div class="weather">
-            <h2 class="city"></h2>
-            <h1 class="temp"></h1>
-            <div class="flex">
-              <img src="https://openweathermap.org/img/wn/10d.png";" alt=""class="icon"/>
-              <div class="description"></div>
-          </div>
-            <div class="humidity">humidity: 60%</div>
-            <div class="wind">wind: 60%</div>
-          </div>
-        </div>
+<div class="container">
+<div class="card">
+  <div class="search">
+    <input type="text" class="search-bar" placeholder="Search"autocomplete="off" >
+    <button><span><i class="fa-solid fa-magnifying-glass-location"></i></span>
+    </button>
   </div>
+  <div class="weather">
+    <h2 class="city"></h2>
+    <h1 class="temp"></h1>
+    <div class="flex">
+      <img src="https://openweathermap.org/img/wn/10d.png";" alt=""class="icon"/>
+      <div class="description"></div>
+  </div>
+    <div class="humidity">humidity: 60%</div>
+    <div class="wind">wind: 60%</div>
+  </div>
+</div>
+</div><!--weather-box-->
 
-            </div>
+    </div>
+</div>
         </div>
         </div>
     </div>
-    <section id="contact">
+    <!-- <section id="contact">
         <div class="contact-con">
             <div class="contact-btn">
                 <a href="#" class="contact-button"></a>
@@ -151,15 +157,13 @@
                 </span>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <footer id="footer">
         <div class="footer-con">
-            <div class="footer-desc">
                 <p class="footer-detail">
-                    Copyright CAMPPANG All Rights Reserved.
+                    camppang<br>Copyright CAMPPANG All Rights Reserved.
                 </p>
-            </div>
             <!-- <div class="footer-logo">
             <img src="/static/img/wave/CAMPPANG-logo.png" alt="">
             </div> -->
