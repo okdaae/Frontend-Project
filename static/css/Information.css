@@ -284,7 +284,7 @@ p {
     flex-direction: row;
     overflow: scroll;
     overflow-x: hidden;
-    height: 700px;
+    height: 600px;
     background-color: aliceblue;
     border-radius: 15px;
 }
