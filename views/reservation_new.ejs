@@ -18,6 +18,10 @@
             --accent-color:  #E5874A;
             --box-color: #e3e3e3;
             }
+        .navbar_toggleBtn{
+            top: 8px !important;
+            right: 32px;
+        }
         body{
             /* background-color: rgba(229, 135, 74, 0.1); */
             background-color: #fcfcfc;
@@ -364,13 +368,13 @@
 
                     <div class="box" id="reservation2">
                         <h5 style="border-bottom:none"b>텐트</h5>
-                        <select id="tent_type">
-                            <option value="1">텐트 선택</option>
-                            <option value="1">225*225*210 (2인용)</option>
-                            <option value="2">300*300*210(3인용)</option>
-                            <option value="3">455*415*210(4인용)</option>
-                            <option value="4">600*612*412(5인용)</option>
-                            <option value="5">1051*1568*1654(6인용)</option>
+                        <select name="tent_type" id="tent_type">
+                            <option value="100,000">텐트 선택</option>
+                            <option value="130,000">225*225*210(2인용)</option>
+                            <option value="150,000">300*300*210(3인용)</option>
+                            <option value="170,000">455*415*210(4인용)</option>
+                            <option value="170,000">600*612*412(5인용)</option>
+                            <option value="200,000">1051*1568*1654(6인용)</option>
                         </select>
                     </div>
                     <div class="box" id="reservation3"#666666>
@@ -545,12 +549,29 @@
                                 - 거래 영수증 확인 및 예약 취소는 예약내역 페이지에서 확인 가능합니다.
                             </li>
                         </ul>
+                        <ul class="list_style nobd">
+                            <li>
+                                - 225*225*210(2인용): 100,000원
+                            </li>
+                            <li>
+                                - 300*300*210(3인용): 130,000원
+                            </li>
+                            <li>
+                                - 455*415*210(4인용): 150,000원
+                            </li>
+                            <li>
+                                - 600*612*412(5인용): 170,000원
+                            </li>
+                            <li>
+                                - 1051*1568*1654(6인용): 200,000원
+                            </li>
+                        </ul>
                         <div class="box">
                             <h5 class="bs" style="border-bottom:none">
                                 <span>결제 예정금액</span>
-                                <!-- 결제 예정금액 -->
+                                
                                 <strong class="price" id="div_total_amount">0원</strong>
-                                <!-- 0원 -->
+                                
                             </h5>
                         </div>
                     </div>
@@ -813,6 +834,12 @@
             //     `,
             //     buttonColor: 'var(--accent-color)'
             // })
+
+        // 결제 예정금액
+        $("select[name=tent_type]").change(function(){
+            // $(this).val();
+            $(".price").html($(this).val()+"원");
+        })
 
 
 
