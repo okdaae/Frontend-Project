@@ -66,6 +66,7 @@ a{
     vertical-align: top;
     line-height:60px;
     white-space: nowrap;
+    color: var(--text-color);
 }
 
 .hidden{

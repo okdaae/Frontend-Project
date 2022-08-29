@@ -29,7 +29,7 @@ body{
     align-items: center;
     background-color: var(--background-color);
     padding: 15px 12px;
-    z-index: 1;
+    z-index: 8000;
     animation-name: navbar;
     animation-duration: 2s;
     font-family: 'Montserrat', sans-serif,  'Noto Sans KR', sans-serif; 
