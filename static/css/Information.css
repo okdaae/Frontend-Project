@@ -313,6 +313,7 @@ p {
         overflow: scroll;
         background-color: aliceblue;
         border-radius: 15px;
+        height: 300px;
     }
     .Guide-img{
         max-width: 100%;
