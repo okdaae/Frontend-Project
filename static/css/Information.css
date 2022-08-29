@@ -311,7 +311,6 @@ p {
         display: flex;
         flex-direction: row;
         overflow: scroll;
-        height: 550px;
         background-color: aliceblue;
         border-radius: 15px;
     }
