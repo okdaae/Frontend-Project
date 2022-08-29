@@ -322,6 +322,9 @@ button{
    line-height: 95px;
 }
 @media screen and (max-width:499px) {
+    .video-wrap{
+        padding-top: 50px;
+    }
     .main-contents{
         display: flex;
         flex-direction: column;
@@ -343,12 +346,12 @@ button{
         background-color: transparent;
     }
     .section1-title{
-        padding-bottom: 58px;
-        font-size: 38px;
-        margin-left: 257px;
+        padding-bottom: 220px;
+        font-size: 25px;
+        margin-left: 88px;
     }
     .weather-content{
-        padding-top: 460px;
+        padding-top: 0;
     }
     .section1-title2{
         font-size: 20px;
